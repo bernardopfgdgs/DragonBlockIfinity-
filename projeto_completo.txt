@@ -1,0 +1,7661 @@
+]633;E;echo "================================================================================";94bb0084-504d-4b32-a797-d28eaad82a71]633;C================================================================================
+ESTRUTURA DO PROJETO
+================================================================================
+
+src/
+└── main/
+    ├── java/
+    │   └── com/
+    │       └── dragonblockinfinity/
+    │           ├── DragonBlockInfinity.java
+    │           ├── client/
+    │           │   ├── event/
+    │           │   ├── gui/
+    │           │   │   ├── hud/
+    │           │   │   ├── overlay/
+    │           │   │   └── screen/
+    │           │   │       └── MenuInicial1.java
+    │           │   ├── hud/
+    │           │   ├── input/
+    │           │   ├── keybind/
+    │           │   │   └── KeyMenu1.java
+    │           │   ├── ki/
+    │           │   └── renderer/
+    │           ├── common/
+    │           │   ├── blocks/
+    │           │   ├── capability/
+    │           │   ├── entity/
+    │           │   ├── event/
+    │           │   ├── fightstyle/
+    │           │   │   ├── FightStyleEnum.java
+    │           │   │   ├── IFightStyle.java
+    │           │   │   ├── MartialArts.java
+    │           │   │   ├── Spiritualist.java
+    │           │   │   └── Warrior.java
+    │           │   ├── forms/
+    │           │   │   └── BaseForm.java
+    │           │   ├── items/
+    │           │   ├── ki/
+    │           │   │   └── KiFunction.java
+    │           │   ├── network/
+    │           │   ├── race/
+    │           │   │   ├── Arcosian.java
+    │           │   │   ├── HalfSaiyan.java
+    │           │   │   ├── Human.java
+    │           │   │   ├── IRace.java
+    │           │   │   ├── Namekian.java
+    │           │   │   ├── RaceEnum.java
+    │           │   │   └── Saiyan.java
+    │           │   └── stats/
+    │           │       ├── Constitution.java
+    │           │       ├── Dexterity.java
+    │           │       ├── Mind.java
+    │           │       ├── PlayerStats.java
+    │           │       ├── Spirit.java
+    │           │       ├── Strength.java
+    │           │       └── Willpower.java
+    │           ├── config/
+    │           ├── registry/
+    │           └── util/
+    │               └── Constants.java
+    └── resources/
+        ├── META-INF/
+        │   └── mods.toml
+        ├── assets/
+        │   └── dragonblockinfinity/
+        │       ├── blockstates/
+        │       ├── lang/
+        │       │   ├── en_us.json
+        │       │   └── pt_br.json
+        │       ├── models/
+        │       │   ├── block/
+        │       │   │   ├── dirty_stone.json
+        │       │   │   ├── dragon_block1_earth.json
+        │       │   │   ├── dragon_block2_earth.json
+        │       │   │   ├── dragon_block3_earth.json
+        │       │   │   ├── dragon_block4_earth.json
+        │       │   │   ├── dragon_block5_earth.json
+        │       │   │   ├── dragon_block6_earth.json
+        │       │   │   ├── dragon_block_7_earth.json
+        │       │   │   └── namek_stone.json
+        │       │   ├── entity/
+        │       │   │   └── nuvem.geo.json
+        │       │   ├── item/
+        │       │   │   ├── comida.json
+        │       │   │   ├── dino_meat.json
+        │       │   │   ├── dino_meat_cooked.json
+        │       │   │   ├── dirty_stone.json
+        │       │   │   ├── dragon_esfer.json
+        │       │   │   ├── esfera_dragon_earth.json
+        │       │   │   ├── namek_stone.json
+        │       │   │   ├── nimbus.json
+        │       │   │   ├── peso.json
+        │       │   │   ├── radar.json
+        │       │   │   ├── scouter.json
+        │       │   │   └── senzu.json
+        │       │   └── mobs/
+        │       │       └── Dinossauro.json
+        │       ├── sounds/
+        │       │   └── passos.ogg
+        │       └── textures/
+        │           ├── blocks/
+        │           │   ├── block_dirty_stone_cobblestone.png
+        │           │   ├── block_dirty_stone_stone.png
+        │           │   ├── block_dragon_block1_earth.png
+        │           │   ├── block_dragon_block2_earth.png
+        │           │   ├── block_dragon_block3_earth.png
+        │           │   ├── block_dragon_block4_earth.png
+        │           │   ├── block_dragon_block5_earth.png
+        │           │   ├── block_dragon_block6_earth.png
+        │           │   ├── block_dragon_block7_earth.png
+        │           │   ├── block_namek_grass_side.png
+        │           │   ├── block_namek_grass_top.png
+        │           │   ├── block_namek_log_side.png
+        │           │   └── block_namek_log_top.png
+        │           ├── entity/
+        │           │   ├── customizacao/
+        │           │   │   ├── eye/
+        │           │   │   │   ├── eye_1_left.png
+        │           │   │   │   └── eye_1_right.png
+        │           │   │   └── hair/
+        │           │   │       ├── careca.png
+        │           │   │       ├── hair_base1.png
+        │           │   │       ├── hair_base2.png
+        │           │   │       ├── hair_base3.png
+        │           │   │       ├── hair_base4.png
+        │           │   │       ├── hair_base6.png
+        │           │   │       └── hairoverlay/
+        │           │   │           ├── hair_1_overlay.png
+        │           │   │           ├── hair_2_overlay.png
+        │           │   │           ├── hair_3_overlay.png
+        │           │   │           └── hair_4_overlay.png
+        │           │   ├── mobs/
+        │           │   │   └── dino/
+        │           │   │       └── dinossauro.png*
+        │           │   ├── musculosrace/
+        │           │   │   ├── musculos.png
+        │           │   │   └── musculos_arconsian.png
+        │           │   ├── race/
+        │           │   │   ├── arconsian.png
+        │           │   │   ├── fsayajin.png
+        │           │   │   ├── humano.png
+        │           │   │   ├── namkian.png
+        │           │   │   └── sayajin.png
+        │           │   └── tail/
+        │           │       ├── tail_arconsian.png
+        │           │       └── tail_half_sayan.png
+        │           ├── gui/
+        │           │   ├── buttoes/
+        │           │   │   ├── maiss.png
+        │           │   │   ├── maissn.png
+        │           │   │   ├── rt.png
+        │           │   │   ├── rtn.png
+        │           │   │   ├── seta_left.png
+        │           │   │   ├── seta_right.png
+        │           │   │   └── x.png
+        │           │   ├── huds/
+        │           │   │   ├── health.png
+        │           │   │   ├── ki_attck_chargin.png
+        │           │   │   ├── ki_attck_charging.png.mcmeta
+        │           │   │   ├── ki_bar_good.png
+        │           │   │   ├── ki_bar_good_empty.png
+        │           │   │   ├── ki_bar_good_fx.png
+        │           │   │   └── ki_bar_good_fx.png.mcmeta
+        │           │   └── menus/
+        │           │       ├── menu_base.png
+        │           │       └── mn.png
+        │           ├── item/
+        │           │   ├── Dragon/
+        │           │   │   ├── item_dragon_block.png
+        │           │   │   └── item_radar.png
+        │           │   ├── blocks/
+        │           │   │   ├── item_dirty_stone_dirty.png
+        │           │   │   └── item_grass_namek.png
+        │           │   ├── comida/
+        │           │   │   ├── item_dino_meat.png
+        │           │   │   └── item_dino_meat_cooked.png
+        │           │   ├── ninbus/
+        │           │   │   ├── item_dark_fly_ninbus.png
+        │           │   │   └── item_fly_ninbus.png
+        │           │   ├── pesos/
+        │           │   │   └── item_peso1.png
+        │           │   └── scouter/
+        │           │       └── item_scouter.png
+        │           ├── models/
+        │           │   └── peso1.png
+        │           └── particules/
+        │               ├── aura/
+        │               │   ├── ki_aura.png
+        │               │   ├── ki_aura.png.mcmeta
+        │               │   ├── ki_aura_ssj1.png
+        │               │   ├── ki_aura_ssj1.png.mcmeta
+        │               │   ├── ki_aura_ssj2.png
+        │               │   ├── ki_aura_ssj2.png.mcmeta
+        │               │   ├── ki_aura_ssj3.png
+        │               │   └── ki_aura_ssj3.png.mcmeta
+        │               ├── hit_clash.png
+        │               └── hit_clash.png.mcmeta
+        └── pack.mcmeta
+
+69 directories, 125 files
+
+
+================================================================================
+CÓDIGOS DOS ARQUIVOS
+================================================================================
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/client/gui/screen/MenuInicial1.java
+################################################################################
+
+package com.dragonblockinfinity.client.gui.screen;
+
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.client.gui.GuiGraphics;
+
+public class MenuInicial1 extends Screen {
+
+    private static final ResourceLocation MENU_TEXTURE = new ResourceLocation("dragonblockinfinity", "textures/gui/menus/menu_base.png");
+    private static final int MENU_WIDTH = 256;
+    private static final int MENU_HEIGHT = 200;
+
+    private int currentRaceIndex = 0;
+    private int currentHairIndex = 0;
+    private int currentEyeIndex = 0;
+
+    private static final String[] RACES = {"Saiyan", "Namekian", "Human", "Majin"};
+    private static final String[] HAIRS = {"Hair1", "Hair2", "Hair3"};
+    private static final String[] EYES = {"Eye1", "Eye2", "Eye3"};
+
+    public MenuInicial1() {
+        super(Component.literal("Menu Inicial"));
+    }
+
+    @Override
+    protected void init() {
+        int centerX = (this.width - MENU_WIDTH) / 2;
+        int centerY = (this.height - MENU_HEIGHT) / 2;
+
+        // Race buttons
+        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
+            currentRaceIndex = (currentRaceIndex - 1 + RACES.length) % RACES.length;
+        }).pos(centerX + 200, centerY + 20).size(20, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
+            currentRaceIndex = (currentRaceIndex + 1) % RACES.length;
+        }).pos(centerX + 230, centerY + 20).size(20, 20).build());
+
+        // Hair buttons
+        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
+            currentHairIndex = (currentHairIndex - 1 + HAIRS.length) % HAIRS.length;
+        }).pos(centerX + 200, centerY + 50).size(20, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
+            currentHairIndex = (currentHairIndex + 1) % HAIRS.length;
+        }).pos(centerX + 230, centerY + 50).size(20, 20).build());
+
+        // Eye buttons
+        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
+            currentEyeIndex = (currentEyeIndex - 1 + EYES.length) % EYES.length;
+        }).pos(centerX + 200, centerY + 80).size(20, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
+            currentEyeIndex = (currentEyeIndex + 1) % EYES.length;
+        }).pos(centerX + 230, centerY + 80).size(20, 20).build());
+    }
+
+    @Override
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+        int centerX = (this.width - MENU_WIDTH) / 2;
+        int centerY = (this.height - MENU_HEIGHT) / 2;
+        RenderSystem.setShaderTexture(0, MENU_TEXTURE);
+        guiGraphics.blit(MENU_TEXTURE, centerX, centerY, 0, 0, MENU_WIDTH, MENU_HEIGHT);
+
+        guiGraphics.drawCenteredString(this.font, "Raça: " + RACES[currentRaceIndex], centerX + 215, centerY + 20, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, "Cabelo: " + HAIRS[currentHairIndex], centerX + 215, centerY + 50, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, "Olhos: " + EYES[currentEyeIndex], centerX + 215, centerY + 80, 0xFFFFFF);
+
+        super.render(guiGraphics, mouseX, mouseY, partialTicks);
+    }
+
+    @Override
+    public boolean isPauseScreen() {
+        return false;
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/client/keybind/KeyMenu1.java
+################################################################################
+
+package com.dragonblockinfinity.client.keybind;
+
+import net.minecraft.client.KeyMapping;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
+import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import org.lwjgl.glfw.GLFW;
+import com.dragonblockinfinity.client.gui.screen.MenuInicial1;
+import net.minecraft.client.Minecraft;
+
+@Mod.EventBusSubscriber(modid = "dragonblockinfinity", value = Dist.CLIENT)
+public class KeyMenu1 {
+    public static final KeyMapping CUSTOMIZATION_MENU_KEY = new KeyMapping(
+        "key.dragonblockinfinity.customization_menu",
+        GLFW.GLFW_KEY_M,
+        "key.categories.dragonblockinfinity"
+    );
+
+    @SubscribeEvent
+    public static void registerKeys(RegisterKeyMappingsEvent event) {
+        event.register(CUSTOMIZATION_MENU_KEY);
+    }
+
+    @SubscribeEvent
+    public static void onKeyInput(InputEvent.Key event) {
+        if (CUSTOMIZATION_MENU_KEY.consumeClick()) {
+            Minecraft.getInstance().setScreen(new MenuInicial1());
+        }
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/DragonBlockInfinity.java
+################################################################################
+
+package com.dragonblockinfinity;
+
+import com.dragonblockinfinity.util.Constants;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+
+@Mod(Constants.MOD_ID)
+public class DragonBlockInfinity {
+    public static final DragonBlockInfinity INSTANCE = new DragonBlockInfinity();
+
+    public DragonBlockInfinity() {
+        // Registro de eventos
+        Mod.EventBusSubscriber.Bus.MOD.bus().get().register(this);
+    }
+
+    @SubscribeEvent
+    public void onCommonSetup(FMLCommonSetupEvent event) {
+        // Configuração comum
+    }
+
+    @SubscribeEvent
+    public void onClientSetup(FMLClientSetupEvent event) {
+        // Configuração do cliente
+    }
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        // Configuração do servidor
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/util/Constants.java
+################################################################################
+
+package com.dragonblockinfinity.util;
+
+public class Constants {
+    public static final String MOD_ID = "DragonBlockInfinity";
+    public static final String MOD_NAME = "Dragon Block Infinity";
+    public static final String MOD_VERSION = "1.0.0";
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/forms/BaseForm.java
+################################################################################
+
+package com.dragonblockinfinity.common.forms;
+
+public class BaseForm {
+   public String formNameBase;
+   public String formDescriptionBase;
+   
+   public String getFormNameBase() {
+      return formNameBase;
+   }
+   
+   public String getFormDescriptionBase() {
+      return formDescriptionBase;
+   }
+   private double masteryFormBase;
+   
+   public double getMasteryFormBase() {
+      return this.masteryFormBase;
+   }
+   public void setMasteryFormBase(double masteryFormBase) {
+    this.masteryFormBase = masteryFormBase;
+   }
+   
+   public void addMasteryFormBase(double ganho) {
+      this.masteryFormBase += ganho;
+   }
+   public double getMultiplierstats() {
+      return 1 + (masteryFormBase * 0.005);
+   }
+   public void gainMasteryOnHit() {
+      this.masteryFormBase += 0.1;
+   }
+   public void gainMasteryOnDamage(double damage) {
+      double ganho = damage * 0.01;
+      this.masteryFormBase += ganho;
+   }
+   public void capMasteryFormBase() {
+   if (this.masteryFormBase > 100) {
+      this.masteryFormBase = 100;
+   }
+}
+   
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/Warrior.java
+################################################################################
+
+package com.dragonblockinfinity.common.fightstyle;
+
+public class Warrior implements IFightStyle {
+    
+    @Override public double getStrengthMultiplier() { return 2.2; }
+    @Override public double getConstitutionMultiplier() { return 2.0; }
+    @Override public double getDexterityMultiplier() { return 1.2; }
+    @Override public double getWillMultiplier() { return 0.8; }
+    @Override public double getSpiritMultiplier() { return 0.5; }
+    @Override public double getMindMultiplier() { return 0.8; }
+    
+    @Override public int getBaseStrength() { return 14; }
+    @Override public int getBaseConstitution() { return 13; }
+    @Override public int getBaseDexterity() { return 10; }
+    @Override public int getBaseWillpower() { return 9; }
+    @Override public int getBaseSpirit() { return 8; }
+    @Override public int getBaseMind() { return 9; }
+    
+    @Override public String getStyleName() { return "Guerreiro"; }
+    @Override public String getStyleDescription() { 
+        return "Focado em força e resistência corporal. Excelente em combate corpo a corpo mas fraco em Ki."; 
+    }
+    
+    @Override
+    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
+        return (int)(
+            (str * getStrengthMultiplier()) +
+            (con * getConstitutionMultiplier()) +
+            (dex * getDexterityMultiplier()) +
+            (will * getWillMultiplier()) +
+            (spi * getSpiritMultiplier()) +
+            (mnd * getMindMultiplier())
+        );
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/Spiritualist.java
+################################################################################
+
+package com.dragonblockinfinity.common.fightstyle;
+
+public class Spiritualist implements IFightStyle {
+    
+    @Override public double getStrengthMultiplier() { return 0.5; }
+    @Override public double getConstitutionMultiplier() { return 0.8; }
+    @Override public double getDexterityMultiplier() { return 1.2; }
+    @Override public double getWillMultiplier() { return 2.0; }
+    @Override public double getSpiritMultiplier() { return 2.2; }
+    @Override public double getMindMultiplier() { return 1.0; }
+    
+    @Override public int getBaseStrength() { return 8; }
+    @Override public int getBaseConstitution() { return 9; }
+    @Override public int getBaseDexterity() { return 10; }
+    @Override public int getBaseWillpower() { return 13; }
+    @Override public int getBaseSpirit() { return 14; }
+    @Override public int getBaseMind() { return 11; }
+    
+    @Override public String getStyleName() { return "Espiritualista"; }
+    @Override public String getStyleDescription() { 
+        return "Focado em Ki e ataques mágicos. Excelente em ofensiva mágica mas fraco em combate corpo a corpo."; 
+    }
+    
+    @Override
+    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
+        return (int)(
+            (str * getStrengthMultiplier()) +
+            (con * getConstitutionMultiplier()) +
+            (dex * getDexterityMultiplier()) +
+            (will * getWillMultiplier()) +
+            (spi * getSpiritMultiplier()) +
+            (mnd * getMindMultiplier())
+        );
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/MartialArts.java
+################################################################################
+
+package com.dragonblockinfinity.common.fightstyle;
+
+public class MartialArts implements IFightStyle {
+    
+    @Override public double getStrengthMultiplier() { return 1.8; }
+    @Override public double getConstitutionMultiplier() { return 1.8; }
+    @Override public double getDexterityMultiplier() { return 1.8; }
+    @Override public double getWillMultiplier() { return 1.2; }
+    @Override public double getSpiritMultiplier() { return 1.2; }
+    @Override public double getMindMultiplier() { return 1.0; }
+    
+    @Override public int getBaseStrength() { return 11; }
+    @Override public int getBaseConstitution() { return 11; }
+    @Override public int getBaseDexterity() { return 12; }
+    @Override public int getBaseWillpower() { return 11; }
+    @Override public int getBaseSpirit() { return 11; }
+    @Override public int getBaseMind() { return 11; }
+    
+    @Override public String getStyleName() { return "Artes Marciais"; }
+    @Override public String getStyleDescription() { 
+        return "Estilo equilibrado e versátil. Bom em vários aspectos mas não se destaca em nenhum."; 
+    }
+    
+    @Override
+    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
+        return (int)(
+            (str * getStrengthMultiplier()) +
+            (con * getConstitutionMultiplier()) +
+            (dex * getDexterityMultiplier()) +
+            (will * getWillMultiplier()) +
+            (spi * getSpiritMultiplier()) +
+            (mnd * getMindMultiplier())
+        );
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/IFightStyle.java
+################################################################################
+
+package com.dragonblockinfinity.common.fightstyle;
+
+public interface IFightStyle {
+    
+    double getStrengthMultiplier();
+    double getConstitutionMultiplier();
+    double getDexterityMultiplier();
+    double getWillMultiplier();
+    double getSpiritMultiplier();
+    double getMindMultiplier();
+    
+    int getBaseStrength();
+    int getBaseConstitution();
+    int getBaseDexterity();
+    int getBaseWillpower();
+    int getBaseSpirit();
+    int getBaseMind();
+    
+    String getStyleName();
+    String getStyleDescription();
+    
+    int calculateBP(int str, int con, int dex, int will, int spi, int mnd);
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/FightStyleEnum.java
+################################################################################
+
+package com.dragonblockinfinity.common.fightstyle;
+
+public enum FightStyleEnum {
+    SPIRITUALIST("Espiritualista", "Focado em Ki e ataques mágicos"),
+    WARRIOR("Guerreiro", "Focado em força e resistência corporal"),
+    MARTIAL_ARTS("Artes Marciais", "Estilo equilibrado e versátil");
+    
+    private final String displayName;
+    private final String description;
+    
+    FightStyleEnum(String displayName, String description) {
+        this.displayName = displayName;
+        this.description = description;
+    }
+    
+    public String getDisplayName() {
+        return displayName;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    @Override
+    public String toString() {
+        return displayName;
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/ki/KiFunction.java
+################################################################################
+
+package com.dragonblockinfinity.common.ki;
+
+import com.dragonblockinfinity.common.forms.BaseForm;
+
+public class KiFunction {
+    private int ki;
+    private int positiveKi;
+    private int negativeKi;
+    private int maxKi = 100; // Maximum Ki value
+    private int minKi = 0;   // Minimum Ki value
+    private int baseMaxKi = 100; // Base maximum Ki, affected by status
+
+    public KiFunction(int ki) {
+        this.ki = ki;
+        this.positiveKi = 0;
+        this.negativeKi = 0;
+    }
+
+    public int getKi() {
+        return ki;
+    }
+
+    public int getPositiveKi() {
+        return positiveKi;
+    }
+
+    public int getNegativeKi() {
+        return negativeKi;
+    }
+
+    public int getMaxKi() {
+        return maxKi;
+    }
+
+    public void setBaseMaxKi(int baseMaxKi) {
+        this.baseMaxKi = baseMaxKi;
+        updateMaxKi();
+    }
+
+    public void updateMaxKi() {
+        this.maxKi = baseMaxKi;
+        if (this.maxKi < minKi) {
+            this.maxKi = minKi;
+        }
+    }
+
+    public void addPositiveKi(int amount) {
+        this.positiveKi += amount;
+    }
+
+    public void addNegativeKi(int amount) {
+        this.negativeKi += amount;
+    }
+
+    public void useKi(int amount) {
+        if (ki >= amount) {
+            ki -= amount;
+        } else {
+            throw new IllegalArgumentException("Not enough Ki to perform this action.");
+        }
+    }
+
+    public void regenerateKi(int amount) {
+        this.ki = Math.min(this.ki + amount, maxKi);
+    }
+
+    public void passiveRegeneration() {
+        regenerateKi(5); // Regenerate 5 Ki per tick (example value)
+    }
+
+    public void checkKiThresholds() {
+        if (ki <= 10) {
+            triggerLowKiEvent();
+        } else if (ki >= maxKi - 10) {
+            triggerHighKiEvent();
+        }
+    }
+
+    private void triggerLowKiEvent() {
+        System.out.println("Warning: Ki is critically low!");
+        // Additional logic for low Ki event
+    }
+
+    private void triggerHighKiEvent() {
+        System.out.println("Ki is at maximum capacity!");
+        // Additional logic for high Ki event
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Namekian.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Namekian implements IRace {
+    
+    @Override public int getMaxKiBase() { return 4500; }
+    @Override public double getKiMultiplier() { return 1.8; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.SPIRITUALIST; }
+    
+    @Override public int getBaseStrength() { return 9; }
+    @Override public int getBaseConstitution() { return 10; }
+    @Override public int getBaseDexterity() { return 10; }
+    @Override public int getBaseWillpower() { return 14; }
+    @Override public int getBaseSpirit() { return 15; }
+    @Override public int getBaseMind() { return 12; }
+    
+    @Override public String getRaceName() { return "Namekiano"; }
+    @Override public String getRaceDescription() { 
+        return "Místicos e regenerativos com grande afinidade com Ki"; 
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/IRace.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public interface IRace {
+    
+    int getMaxKiBase();
+    double getKiMultiplier();
+    FightStyleEnum getPreferredFightStyle();
+    
+    int getBaseStrength();
+    int getBaseConstitution();
+    int getBaseDexterity();
+    int getBaseWillpower();
+    int getBaseSpirit();
+    int getBaseMind();
+    
+    String getRaceName();
+    String getRaceDescription();
+    
+    default int calculateMaxKi() {
+        return (int)(getMaxKiBase() * getKiMultiplier());
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/RaceEnum.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+public enum RaceEnum {
+    SAIYAN("Saiyajin", "Guerreiros natos com grande potencial"),
+    HALF("Metade-Saiyajin", "Híbrido com potencial extraordinário"),
+    HUMAN("Humano", "Adaptável e determinado"),
+    ARCONSIAN("Arconsiano", "Guerreiro galáctico frio e poderoso"),
+    NAMEKIAN("Namekiano", "Místicos e regenerativos");
+    
+    private final String displayName;
+    private final String description;
+    
+    RaceEnum(String displayName, String description) {
+        this.displayName = displayName;
+        this.description = description;
+    }
+    
+    public String getDisplayName() {
+        return displayName;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    @Override
+    public String toString() {
+        return displayName;
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/HalfSaiyan.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class HalfSaiyan implements IRace {
+    
+    @Override public int getMaxKiBase() { return 4000; }
+    @Override public double getKiMultiplier() { return 1.4; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.MARTIAL_ARTS; }
+    
+    @Override public int getBaseStrength() { return 12; }
+    @Override public int getBaseConstitution() { return 11; }
+    @Override public int getBaseDexterity() { return 11; }
+    @Override public int getBaseWillpower() { return 10; }
+    @Override public int getBaseSpirit() { return 11; }
+    @Override public int getBaseMind() { return 10; }
+    
+    @Override public String getRaceName() { return "Half-Saiyajin"; }
+    @Override public String getRaceDescription() { 
+        return "Híbrido com potencial extraordinário"; 
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Saiyan.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Saiyan implements IRace {
+    
+    @Override public int getMaxKiBase() { return 5000; }
+    @Override public double getKiMultiplier() { return 1.5; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.WARRIOR; }
+    
+    @Override public int getBaseStrength() { return 15; }
+    @Override public int getBaseConstitution() { return 14; }
+    @Override public int getBaseDexterity() { return 12; }
+    @Override public int getBaseWillpower() { return 10; }
+    @Override public int getBaseSpirit() { return 10; }
+    @Override public int getBaseMind() { return 8; }
+    
+    @Override public String getRaceName() { return "Saiyajin"; }
+    @Override public String getRaceDescription() { 
+        return "Guerreiros natos com grande potencial de poder e transformações"; 
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Arcosian.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Arcosian implements IRace {
+    
+    @Override public int getMaxKiBase() { return 6000; }
+    @Override public double getKiMultiplier() { return 1.8; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.WARRIOR; }
+    
+    @Override public int getBaseStrength() { return 14; }
+    @Override public int getBaseConstitution() { return 13; }
+    @Override public int getBaseDexterity() { return 9; }
+    @Override public int getBaseWillpower() { return 9; }
+    @Override public int getBaseSpirit() { return 9; }
+    @Override public int getBaseMind() { return 10; }
+    
+    @Override public String getRaceName() { return "Arcosian"; }
+    @Override public String getRaceDescription() { 
+        return "Tirano intergaláctico com poder lendário"; 
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Human.java
+################################################################################
+
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Human implements IRace {
+    
+    @Override public int getMaxKiBase() { return 3000; }
+    @Override public double getKiMultiplier() { return 1.0; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.MARTIAL_ARTS; }
+    
+    @Override public int getBaseStrength() { return 11; }
+    @Override public int getBaseConstitution() { return 11; }
+    @Override public int getBaseDexterity() { return 11; }
+    @Override public int getBaseWillpower() { return 11; }
+    @Override public int getBaseSpirit() { return 11; }
+    @Override public int getBaseMind() { return 12; }
+    
+    @Override public String getRaceName() { return "Humano"; }
+    @Override public String getRaceDescription() { 
+        return "Adaptável e determinado com grande potencial de aprendizado"; 
+    }
+}
+
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Constitution.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class Constitution {
+    private double value;
+
+    public Constitution(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public boolean isDamageAndKnockbackNullified(double enemyDamage, double currentStamina) {
+        if (value > enemyDamage && currentStamina > 0) {
+            return true; // Dano e knockback anulados
+        }
+        return false;
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Dexterity.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class Dexterity {
+    private double value;
+
+    public Dexterity(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    // Multiplicador base de Dexteridade
+    public double getMultiplier() {
+        return 1 + (value * 0.01); // Multiplicador baseado no valor de Dexterity
+    }
+
+    // Defesa passiva (redução de dano)
+    public double getPassiveDefense() {
+        return value * 0.5; // Redução passiva de dano
+    }
+
+    // Redução de dano passiva
+    public double getDamageReduction() {
+        return (value * 0.5) / 100.0; // Reduz dano em 0.5% por ponto de Dexterity
+    }
+
+    public double calculateDodgeChance(double enemyDamage) {
+        if (value >= 2.9 * enemyDamage) {
+            return 7.0 * getMultiplier(); // Multiplica a esquiva
+        }
+        return 0.0;
+    }
+
+    public double calculateKnockbackReduction(double enemyDamage) {
+        if (value >= 2.9 * enemyDamage) {
+            return 0.7 * getMultiplier(); // Multiplica a redução de knockback
+        }
+        return 1.0; // Sem redução
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Strength.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class Strength {
+    private double value;
+
+    public Strength(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public double calculateStaminaCost(double con, double stamina) {
+        if (value > con) {
+            return stamina * (1 + (value - con) * 0.1); // Gasto maior
+        } else {
+            return stamina * (1 - (con - value) * 0.05); // Gasto menor
+        }
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Willpower.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class Willpower {
+    private double kiAttackPower;
+
+    public Willpower(double kiAttackPower) {
+        this.kiAttackPower = kiAttackPower;
+    }
+
+    public double getKiAttackPower() {
+        return kiAttackPower;
+    }
+
+    public void setKiAttackPower(double kiAttackPower) {
+        this.kiAttackPower = kiAttackPower;
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Mind.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class Mind {
+    private double skillPoints;
+
+    public Mind(double skillPoints) {
+        this.skillPoints = skillPoints;
+    }
+
+    public double getSkillPoints() {
+        return skillPoints;
+    }
+
+    public void setSkillPoints(double skillPoints) {
+        this.skillPoints = skillPoints;
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Spirit.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class Spirit {
+    private double maxKi;
+
+    public Spirit(double maxKi) {
+        this.maxKi = maxKi;
+    }
+
+    public double getMaxKi() {
+        return maxKi;
+    }
+
+    public void setMaxKi(double maxKi) {
+        this.maxKi = maxKi;
+    }
+}
+
+################################################################################
+# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/PlayerStats.java
+################################################################################
+
+package com.dragonblockinfinity.common.stats;
+
+public class PlayerStats {
+    private double str; // Força
+    private double spi; // Ki Máximo
+    private double will; // Força do ataque de Ki
+    private double mnd; // Moeda para upar skills e formas
+    private double con; // Vida e Stamina Máxima
+    private double dex; // Velocidade e Vida
+
+    // Construtor
+    public PlayerStats(double str, double spi, double will, double mnd, double con, double dex) {
+        this.str = str;
+        this.spi = spi;
+        this.will = will;
+        this.mnd = mnd;
+        this.con = con;
+        this.dex = dex;
+    }
+
+    // Getters e Setters
+    public double getStr() {
+        return str;
+    }
+
+    public void setStr(double str) {
+        this.str = str;
+    }
+
+    public double getSpi() {
+        return spi;
+    }
+
+    public void setSpi(double spi) {
+        this.spi = spi;
+    }
+
+    public double getWill() {
+        return will;
+    }
+
+    public void setWill(double will) {
+        this.will = will;
+    }
+
+    public double getMnd() {
+        return mnd;
+    }
+
+    public void setMnd(double mnd) {
+        this.mnd = mnd;
+    }
+
+    public double getCon() {
+        return con;
+    }
+
+    public void setCon(double con) {
+        this.con = con;
+    }
+
+    public double getDex() {
+        return dex;
+    }
+
+    public void setDex(double dex) {
+        this.dex = dex;
+    }
+
+    // Cálculo de gasto de stamina baseado em Str e Con
+    public double calculateStaminaCost(double stamina) {
+        if (str > con) {
+            return stamina * (1 + (str - con) * 0.1); // Gasto maior
+        } else {
+            return stamina * (1 - (con - str) * 0.05); // Gasto menor
+        }
+    }
+
+    // Cálculo de esquiva baseado em Dex
+    public double calculateDodgeChance(double enemyDamage) {
+        if (dex >= 2.9 * enemyDamage) {
+            return 7.0; // 7% de esquiva
+        }
+        return 0.0;
+    }
+
+    // Redução de knockback baseado em Dex
+    public double calculateKnockbackReduction(double enemyDamage) {
+        if (dex >= 2.9 * enemyDamage) {
+            return 0.7; // Reduz knockback em 30%
+        }
+        return 1.0; // Sem redução
+    }
+
+    // Anulação de dano e knockback baseado em defesa real e stamina
+    public boolean isDamageAndKnockbackNullified(double enemyDamage, double currentStamina) {
+        if (con > enemyDamage && currentStamina > 0) {
+            return true; // Dano e knockback anulados
+        }
+        return false;
+    }
+}
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/lang/pt_br.json
+################################################################################
+
+{
+  "key.categories.dragonblockinfinity": "Dragon Block Infinity",
+  "key.dragonblockinfinity.consume_ki": "Gastar Ki (Teste)"
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/lang/en_us.json
+################################################################################
+
+{
+  "key.categories.dragonblockinfinity": "Dragon Block Infinity",
+  "key.dragonblockinfinity.consume_ki": "Spend Ki (Test)"
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/entity/nuvem.geo.json
+################################################################################
+
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, -3.25]
+				},
+				{
+					"name": "nubecita1",
+					"parent": "root",
+					"pivot": [0, 0, -3.25],
+					"cubes": [
+						{
+							"origin": [-10, 6.5, -13.25],
+							"size": [19, 11.5, 23],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita3",
+					"parent": "root",
+					"pivot": [-2.25, -2.75, -6.25],
+					"cubes": [
+						{
+							"origin": [-2.45, 7.25, -16.25],
+							"size": [11, 10, 10],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita4",
+					"parent": "root",
+					"pivot": [-10, 0.25, -5.75],
+					"cubes": [
+						{
+							"origin": [-11.1, 8.85, -14.75],
+							"size": [11, 11, 13],
+							"pivot": [-10.1, 9.85, -5.75],
+							"rotation": [0, 0, 2.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita5",
+					"parent": "root",
+					"pivot": [-10.75, -3, 2],
+					"cubes": [
+						{
+							"origin": [-11.75, 6, -9],
+							"size": [11, 10, 15],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita6",
+					"parent": "root",
+					"pivot": [-10.5, -0.5, 7.5],
+					"cubes": [
+						{
+							"origin": [-9.1, 8.5, -1.5],
+							"size": [10.6, 10.25, 14],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita7",
+					"parent": "root",
+					"pivot": [0.5, 0, 7.25],
+					"cubes": [
+						{
+							"origin": [-6.4, 9.6, -2.75],
+							"size": [11, 10, 14],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita10",
+					"parent": "root",
+					"pivot": [0, -1.25, -3.5],
+					"cubes": [
+						{
+							"origin": [-12, 7.75, -13.75],
+							"size": [23, 10, 23.25],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita11",
+					"parent": "root",
+					"pivot": [0, -1.25, -3.5],
+					"cubes": [
+						{
+							"origin": [-0.5, 8.75, -12.5],
+							"size": [13.25, 10, 11.25],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita12",
+					"parent": "root",
+					"pivot": [-5.75, -1.5, -6.75],
+					"cubes": [
+						{
+							"origin": [-6.2, 8.1, -17.05],
+							"size": [12.75, 10.75, 13.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita13",
+					"parent": "root",
+					"pivot": [-5.75, -1.5, -6.75]
+				},
+				{
+					"name": "nubecita14",
+					"parent": "root",
+					"pivot": [-8.6, -0.5, -6.5],
+					"rotation": [0, 0, -5],
+					"cubes": [
+						{
+							"origin": [-11.7, 8.5, -12.25],
+							"size": [10.6, 10.25, 11],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita15",
+					"parent": "root",
+					"pivot": [0, 0.75, -5.25],
+					"rotation": [0, 0, 7.5],
+					"cubes": [
+						{
+							"origin": [-0.5, 9.4, -14.25],
+							"size": [12, 10.1, 10.5],
+							"pivot": [1.5, 9.4, -7.25],
+							"rotation": [0, 0, -12.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita8",
+					"parent": "root",
+					"pivot": [-5.25, 0, 16.25],
+					"cubes": [
+						{
+							"origin": [-5.25, 12, 0.25],
+							"size": [9, 6, 14],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita9",
+					"parent": "root",
+					"pivot": [-6.5, 0, 19],
+					"cubes": [
+						{
+							"origin": [-6.25, 10.75, 3],
+							"size": [7.75, 6.75, 14],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita16",
+					"parent": "root",
+					"pivot": [-5.25, 0, 22],
+					"cubes": [
+						{
+							"origin": [-0.85, 11.75, 10],
+							"size": [3, 4.75, 11.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita17",
+					"parent": "root",
+					"pivot": [-4.75, -1.75, 17],
+					"cubes": [
+						{
+							"origin": [-4.75, 10.25, 1],
+							"size": [9, 6, 14],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita18",
+					"parent": "root",
+					"pivot": [-13, 0.5, 8.25],
+					"cubes": [
+						{
+							"origin": [-9.6, 9.5, 0.85],
+							"size": [9.6, 10.25, 12],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita2",
+					"parent": "root",
+					"pivot": [-15.05, -0.1, 9.25],
+					"cubes": [
+						{
+							"origin": [-11.35, 9.9, -0.15],
+							"size": [9.6, 9.25, 13.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita19",
+					"parent": "root",
+					"pivot": [-15.25, 1.25, 9],
+					"cubes": [
+						{
+							"origin": [-12.55, 13.95, -2.4],
+							"size": [7.6, 6.25, 8],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita20",
+					"parent": "root",
+					"pivot": [2.5, 0.5, 8],
+					"cubes": [
+						{
+							"origin": [1.55, 9.5, 0],
+							"size": [8, 10, 12],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita21",
+					"parent": "root",
+					"pivot": [-8, 0.75, 5.75],
+					"cubes": [
+						{
+							"origin": [-5.6, 13.75, 2.35],
+							"size": [7.6, 6.25, 8],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita22",
+					"parent": "root",
+					"pivot": [0, -1.25, -3.5],
+					"cubes": [
+						{
+							"origin": [-3.65, 8.75, 1],
+							"size": [15.5, 8.25, 9.75],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita23",
+					"parent": "root",
+					"pivot": [-1.5, 2, -9],
+					"cubes": [
+						{
+							"origin": [1.75, 12, -4.5],
+							"size": [9.5, 8.25, 9.75],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita24",
+					"parent": "root",
+					"pivot": [-15.55, -2.6, 9.75],
+					"cubes": [
+						{
+							"origin": [-11.75, 8.4, 3.35],
+							"size": [9.6, 9.25, 10.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita25",
+					"parent": "root",
+					"pivot": [-1.25, -1.65, -1.75],
+					"cubes": [
+						{
+							"origin": [-5.2, 9.75, 3.25],
+							"size": [15.5, 8.25, 9.75],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita26",
+					"parent": "root",
+					"pivot": [-7.25, 0, 24],
+					"cubes": [
+						{
+							"origin": [-2.85, 12.25, 12],
+							"size": [3, 3.75, 11.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita27",
+					"parent": "root",
+					"pivot": [0.45, -2.6, 9.75],
+					"cubes": [
+						{
+							"origin": [1.85, 9.3, -1.7],
+							"size": [9.6, 9.25, 10.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita28",
+					"parent": "root",
+					"pivot": [-8.3, -3.85, 9.8],
+					"cubes": [
+						{
+							"origin": [-5.9, 7.15, 1.15],
+							"size": [9.6, 9.25, 10.5],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				},
+				{
+					"name": "nubecita29",
+					"parent": "root",
+					"pivot": [-5.5, -3.3, 2],
+					"cubes": [
+						{
+							"origin": [-6.5, 5.7, -9],
+							"size": [11, 10, 15],
+							"uv": {
+								"north": {"uv": [0, 33], "uv_size": [19, 10]},
+								"east": {"uv": [0, 23], "uv_size": [23, 10]},
+								"south": {"uv": [19, 33], "uv_size": [19, 10]},
+								"west": {"uv": [23, 23], "uv_size": [23, 10]},
+								"up": {"uv": [0, 0], "uv_size": [19, 23]},
+								"down": {"uv": [19, 23], "uv_size": [19, -23]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/nimbus.json
+################################################################################
+
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/ninbus/fly_ninbus"
+  },
+  "display": {
+    "thirdperson_righthand": { "rotation": [ 75, -10, 0 ], "translation": [ 0, 2.5, 0 ], "scale": [ 0.375, 0.375, 0.375 ] },
+    "firstperson_righthand": { "rotation": [ 0, -135, 25 ], "translation": [ 0, 4, 2 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.25, 0.25, 0.25 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dragon_esfer.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/ninbus/dragon_esfer"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/senzu.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/comida/senzu"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dino_meat_cooked.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/comida/dino_meat_cooked"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/radar.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/ninbus/radar"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/comida.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/comida/comida"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dirty_stone.json
+################################################################################
+
+{
+  "parent": "dragonblockinfinity:block/dirty_stone"
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/namek_stone.json
+################################################################################
+
+{
+  "parent": "dragonblockinfinity:block/namek_stone"
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dino_meat.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/comida/dino_meat"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/peso.json
+################################################################################
+
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/pesos/peso"
+  },
+  "display": {
+    "thirdperson_righthand": { "rotation": [ 75, -10, 0 ], "translation": [ 0, 2.5, 0 ], "scale": [ 0.375, 0.375, 0.375 ] },
+    "firstperson_righthand": { "rotation": [ 0, -135, 25 ], "translation": [ 0, 4, 2 ], "scale": [ 0.45, 0.45, 0.45 ] },
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.25, 0.25, 0.25 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/scouter.json
+################################################################################
+
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/scouter/scouter"
+  },
+  "display": {
+    "thirdperson_righthand": { "rotation": [ 75, -10, 0 ], "translation": [ 0, 2.5, 0 ], "scale": [ 0.375, 0.375, 0.375 ] },
+    "firstperson_righthand": { "rotation": [ 0, -135, 25 ], "translation": [ 0, 4, 2 ], "scale": [ 0.4, 0.4, 0.4 ] },
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.25, 0.25, 0.25 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/esfera_dragon_earth.json
+################################################################################
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonblockinfinity:item/ninbus/esfera_dragon_earth"
+  },
+  "display": {
+    "gui": { "rotation": [ 30, -135, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.625, 0.625, 0.625 ] },
+    "ground": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 3, 0 ], "scale": [ 0.5, 0.5, 0.5 ] },
+    "fixed": { "rotation": [ 0, 0, 0 ], "translation": [ 0, 0, 0 ], "scale": [ 0.5, 0.5, 0.5 ] }
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block2_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 2
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 2
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 2
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 2
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 2
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 2
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block3_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 3
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 3
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 3
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 3
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 3
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 3
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dirty_stone.json
+################################################################################
+
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dragonblockinfinity:block/dirty_stone_stone"
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/namek_stone.json
+################################################################################
+
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "minecraft:block/stone"
+  }
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block1_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 1
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 1
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 1
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 1
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 1
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 1
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block5_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 5
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 5
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 5
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 5
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 5
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 5
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block6_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 6
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 6
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 6
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 6
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 6
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 6
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block4_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 4
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 4
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 4
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 4
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 4
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 4
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block_7_earth.json
+################################################################################
+
+{
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        1.85,
+        0.9
+      ],
+      "to": [
+        13.95,
+        7,
+        13.8
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        1,
+        6.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            13,
+            80.875,
+            18.125
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            68,
+            19,
+            80.875,
+            24.125
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            60,
+            68,
+            72.875,
+            73.125
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            70,
+            0,
+            82.875,
+            5.125
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            38.875,
+            60.875,
+            26,
+            48
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            51.875,
+            48,
+            39,
+            60.875
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "922c56e9-7e37-0b6a-2a0f-11ac611144b3"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        10.925,
+        1.15
+      ],
+      "to": [
+        13.95,
+        16.075,
+        13.85
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        14.075,
+        7.225
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            70,
+            6,
+            82.875,
+            11.125
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            32,
+            74,
+            44.75,
+            79.125
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            73,
+            55,
+            85.875,
+            60.125
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            60,
+            74,
+            72.75,
+            79.125
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            12.875,
+            61.75,
+            0,
+            49
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            25.875,
+            49,
+            13,
+            61.75
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "dfb4a5b0-47d4-9d47-c74c-9cfeb40a5fe1"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        -0.025
+      ],
+      "to": [
+        13.95,
+        15.45,
+        5.125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        1.975
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            26,
+            64.875,
+            38.75
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            45,
+            74,
+            50.125,
+            86.75
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            52,
+            39,
+            64.875,
+            51.75
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            0,
+            75,
+            5.125,
+            87.75
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            85.875,
+            66.125,
+            73,
+            61
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            85.875,
+            67,
+            73,
+            72.125
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "24131aaf-7387-04c8-45c6-da542fab2c70"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.025,
+        2.75,
+        7.8
+      ],
+      "to": [
+        13.95,
+        15.45,
+        14.95
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        6.075,
+        8.825,
+        15.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            52,
+            64.875,
+            64.75
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            52,
+            65,
+            59.125,
+            77.75
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            26,
+            61,
+            38.875,
+            73.75
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            65,
+            55,
+            72.125,
+            67.75
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            77.875,
+            46.125,
+            65,
+            39
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            77.875,
+            47,
+            65,
+            54.125
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "703eedfd-ca9a-2752-e2cb-dd5dfb225491"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        14.275
+      ],
+      "to": [
+        13.05,
+        14.9,
+        16.275
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        14.275
+      ],
+      "uv_offset": [
+        42,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            15,
+            55,
+            26
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            42,
+            15,
+            44,
+            26
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            57,
+            15,
+            68,
+            26
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            55,
+            15,
+            57,
+            26
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            55,
+            15,
+            44,
+            13
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            66,
+            13,
+            55,
+            15
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "4eaf800a-0e6b-7505-9347-98987731c9b6"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        1.975,
+        3.875,
+        -1.025
+      ],
+      "to": [
+        13.05,
+        14.9,
+        0.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        5.525,
+        8.4,
+        -1.025
+      ],
+      "uv_offset": [
+        44,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            46,
+            2,
+            57,
+            13
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            44,
+            2,
+            46,
+            13
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            59,
+            2,
+            70,
+            13
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            57,
+            2,
+            59,
+            13
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            57,
+            2,
+            46,
+            0
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            68,
+            0,
+            57,
+            2
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "384e5e34-54a2-fe73-eeae-f45e54e0aae2"
+    },
+    {
+      "name": "cube",
+      "box_uv": true,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        -1.025,
+        3.875,
+        1.9
+      ],
+      "to": [
+        0.975,
+        14.9,
+        12.975
+      ],
+      "autouv": 0,
+      "color": 3,
+      "origin": [
+        0.975,
+        8.4,
+        5.325
+      ],
+      "uv_offset": [
+        0,
+        27
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            38,
+            13,
+            49
+          ],
+          "texture": 7
+        },
+        "east": {
+          "uv": [
+            0,
+            38,
+            11,
+            49
+          ],
+          "texture": 7
+        },
+        "south": {
+          "uv": [
+            24,
+            38,
+            26,
+            49
+          ],
+          "texture": 7
+        },
+        "west": {
+          "uv": [
+            13,
+            38,
+            24,
+            49
+          ],
+          "texture": 7
+        },
+        "up": {
+          "uv": [
+            13,
+            38,
+            11,
+            27
+          ],
+          "texture": 7
+        },
+        "down": {
+          "uv": [
+            15,
+            27,
+            13,
+            38
+          ],
+          "texture": 7
+        }
+      },
+      "type": "cube",
+      "uuid": "9a3f00b4-cbce-bc44-a3e6-3fcc4f5e8010"
+    }
+  ]
+}
+
+################################################################################
+# Arquivo: src/main/resources/assets/dragonblockinfinity/models/mobs/Dinossauro.json
+################################################################################
+
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.Dinossauro",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 18,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "bone13",
+					"parent": "body",
+					"pivot": [0, 0, 6],
+					"cubes": [
+						{
+							"origin": [-7.1, 18, 20.1],
+							"size": [14.2, 16, 10],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-5.1, 20, 46.1],
+							"size": [10.2, 12, 16],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-3.1, 22, 81.1],
+							"size": [6.2, 8, 15],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-4.1, 21, 62.1],
+							"size": [8.2, 10, 19],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-3.1, 23, 96.1],
+							"size": [5.2, 6, 19],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-2.1, 24, 115.1],
+							"size": [3.2, 4, 19],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-8.1, 17, 9.9],
+							"size": [16.2, 18, 10.2],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-6.1, 19, 30.1],
+							"size": [12.2, 14, 16],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone14",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-9.1, 16, -5.1],
+							"size": [18.2, 20, 15],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-10.1, 14, -27.1],
+							"size": [20.2, 23, 22],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-8.1, 17, -34.1],
+							"size": [16.2, 19, 10],
+							"pivot": [0, 25.5, -29.1],
+							"rotation": [-12.5, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-6.1, 20.04432, -38.76659],
+							"size": [12.2, 15, 9],
+							"pivot": [0, 28.04432, -34.26659],
+							"rotation": [-35, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-4.1, 23.8213, -43.26042],
+							"size": [8.2, 13, 8],
+							"pivot": [0, 30.8213, -42.26042],
+							"rotation": [-10, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						},
+						{
+							"origin": [-3.1, 25.63617, -44.59835],
+							"size": [6.2, 10, 1.8],
+							"pivot": [-0.01, 31.877, -41.59835],
+							"rotation": [-10, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [18, 30]},
+								"east": {"uv": [54, 36], "uv_size": [7, 17]},
+								"south": {"uv": [23, 35], "uv_size": [14, 18]},
+								"west": {"uv": [23, 35], "uv_size": [14, 18]},
+								"up": {"uv": [53, 60], "uv_size": [8, 4]},
+								"down": {"uv": [53, 64], "uv_size": [9, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "head",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "bone",
+					"parent": "head",
+					"pivot": [0, 28.77717, -47.04392],
+					"cubes": [
+						{
+							"origin": [-4.11, 28.9, -55.1],
+							"size": [8.22, 8.2, 10.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-3.11, 28.9, -44.9],
+							"size": [6.22, 7.2, 1],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [4.1, 26.86793, -54.74292],
+							"size": [0, 3, 9.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-4.1, 26.86793, -54.74292],
+							"size": [0, 3, 9.2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [4.1, 28.9, -53.1],
+							"size": [1, 4, 6.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-5.1, 28.9, -53.1],
+							"size": [1, 4, 6.2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [3.66699, 28.9, -47.28397],
+							"size": [1, 4, 2],
+							"pivot": [4.16699, 30.9, -46.28397],
+							"rotation": [0, -30, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-4.66699, 28.9, -47.28397],
+							"size": [1, 4, 2],
+							"pivot": [-4.16699, 30.9, -46.28397],
+							"rotation": [0, 30, 0],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [3.66699, 28.9, -54.71603],
+							"size": [1, 4, 2],
+							"pivot": [4.16699, 30.9, -53.71603],
+							"rotation": [0, 30, 0],
+							"uv": {
+								"north": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"east": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"south": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"west": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"up": {"uv": [30, 63], "uv_size": [8, -7]},
+								"down": {"uv": [0, 29], "uv_size": [3, 4]}
+							}
+						},
+						{
+							"origin": [-4.66699, 28.9, -54.71603],
+							"size": [1, 4, 2],
+							"pivot": [-4.16699, 30.9, -53.71603],
+							"rotation": [0, -30, 0],
+							"uv": {
+								"north": {"uv": [26, 36], "uv_size": [10, 16]},
+								"east": {"uv": [40, 51], "uv_size": [10, 12]},
+								"south": {"uv": [1, 35], "uv_size": [20, 20]},
+								"west": {"uv": [39, 38], "uv_size": [10, 12]},
+								"up": {"uv": [38, 63], "uv_size": [-8, -7]},
+								"down": {"uv": [3, 29], "uv_size": [-3, 4]}
+							}
+						},
+						{
+							"origin": [-4.1, 28.9, -63.1],
+							"size": [8.2, 6.2, 8],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [-4.8, 32.95, -57.1],
+							"size": [1, 2.2, 2],
+							"pivot": [-4.5, 34, -56.1],
+							"rotation": [0, -7.5, 0],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [3.8, 32.95, -57.1],
+							"size": [1, 2.2, 2],
+							"pivot": [4.5, 34, -56.1],
+							"rotation": [0, 7.5, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [4.1, 26.9, -57.1],
+							"size": [0, 2, 2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [-4.1, 26.9, -57.1],
+							"size": [0, 2, 2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [4.1, 26.9, -61.1],
+							"size": [0, 2, 2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [-4.1, 26.9, -61.1],
+							"size": [0, 2, 2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [4.099, 26.9, -64.6],
+							"size": [0, 2, 2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [-4.099, 26.9, -64.6],
+							"size": [0, 2, 2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-3.1, 33.83673, -61.45089],
+							"size": [6.2, 2, 7],
+							"pivot": [0, 34.83673, -57.95089],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-5.1, 35.16139, -58.48645],
+							"size": [2, 2, 6],
+							"pivot": [-4.1, 36.16139, -55.48645],
+							"rotation": [12.79362, -12.19908, -2.74715],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [3.1, 35.16139, -58.48645],
+							"size": [2, 2, 6],
+							"pivot": [4.1, 36.16139, -55.48645],
+							"rotation": [12.79362, 12.19908, 2.74715],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [-4.09, 32.21213, -64.73223],
+							"size": [8.18, 2.2, 2.8],
+							"pivot": [0, 33.31213, -63.33223],
+							"rotation": [45, 0, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-4.1, 28.9, -65.1],
+							"size": [8.2, 4.2, 2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [0.6, 26.9, -64.8],
+							"size": [2.2, 2, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-2.8, 26.9, -64.8],
+							"size": [2.2, 2, 0],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone12",
+					"parent": "head",
+					"pivot": [0, 28.4, -47.04],
+					"cubes": [
+						{
+							"origin": [-4.11, 24.9, -55.1],
+							"size": [8.22, 4, 10.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-3.11, 25.9, -44.9],
+							"size": [6.22, 3, 1],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [4.1, 28.9, -54.1],
+							"size": [0, 3, 9.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-4.1, 28.9, -54.1],
+							"size": [0, 3, 9.2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [4.1, 24.9, -53.1],
+							"size": [1, 4, 6.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-5.1, 24.9, -53.1],
+							"size": [1, 4, 6.2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [3.66699, 24.9, -47.28397],
+							"size": [1, 4, 2],
+							"pivot": [4.16699, 26.9, -46.28397],
+							"rotation": [0, -30, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-4.66699, 24.9, -47.28397],
+							"size": [1, 4, 2],
+							"pivot": [-4.16699, 26.9, -46.28397],
+							"rotation": [0, 30, 0],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [3.66699, 24.9, -54.71603],
+							"size": [1, 4, 2],
+							"pivot": [4.16699, 26.9, -53.71603],
+							"rotation": [0, 30, 0],
+							"uv": {
+								"north": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"east": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"south": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"west": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"up": {"uv": [30, 63], "uv_size": [8, -7]},
+								"down": {"uv": [0, 29], "uv_size": [3, 4]}
+							}
+						},
+						{
+							"origin": [-4.66699, 24.9, -54.71603],
+							"size": [1, 4, 2],
+							"pivot": [-4.16699, 26.9, -53.71603],
+							"rotation": [0, -30, 0],
+							"uv": {
+								"north": {"uv": [26, 36], "uv_size": [10, 16]},
+								"east": {"uv": [40, 51], "uv_size": [10, 12]},
+								"south": {"uv": [1, 35], "uv_size": [20, 20]},
+								"west": {"uv": [39, 38], "uv_size": [10, 12]},
+								"up": {"uv": [38, 63], "uv_size": [-8, -7]},
+								"down": {"uv": [3, 29], "uv_size": [-3, 4]}
+							}
+						},
+						{
+							"origin": [-3.6, 23.9, -55.1],
+							"size": [7.2, 1, 9.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-3.6, 24.9, -65.1],
+							"size": [7.2, 4, 10],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-1.1, 28.9, -65],
+							"size": [2.2, 2, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [3.6, 28.9, -57.3],
+							"size": [0, 2, 2.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-3.6, 28.9, -57.3],
+							"size": [0, 2, 2.2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [3.6, 28.9, -61.3],
+							"size": [0, 2, 2.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-3.6, 28.9, -61.3],
+							"size": [0, 2, 2.2],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [2.6, 28.9, -65.3],
+							"size": [0, 2, 2.2],
+							"pivot": [2.6, 29.9, -64.2],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						},
+						{
+							"origin": [-2.6, 28.9, -65.3],
+							"size": [0, 2, 2.2],
+							"pivot": [-2.6, 29.9, -64.2],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [21, 35], "uv_size": [-20, 20]},
+								"east": {"uv": [50, 51], "uv_size": [-10, 12]},
+								"south": {"uv": [36, 36], "uv_size": [-10, 16]},
+								"west": {"uv": [49, 38], "uv_size": [-10, 12]},
+								"up": {"uv": [38, 56], "uv_size": [-8, 7]},
+								"down": {"uv": [3, 33], "uv_size": [-3, -4]}
+							}
+						},
+						{
+							"origin": [-3.1, 23.9, -64.3],
+							"size": [6.2, 1, 9.2],
+							"uv": {
+								"north": {"uv": [1, 35], "uv_size": [20, 20]},
+								"east": {"uv": [39, 38], "uv_size": [10, 12]},
+								"south": {"uv": [26, 36], "uv_size": [10, 16]},
+								"west": {"uv": [40, 51], "uv_size": [10, 12]},
+								"up": {"uv": [30, 56], "uv_size": [8, 7]},
+								"down": {"uv": [0, 33], "uv_size": [3, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "bone10",
+					"parent": "rightArm",
+					"pivot": [-10, 15, -21],
+					"cubes": [
+						{
+							"origin": [-12, 13, -23],
+							"size": [4, 7, 4],
+							"pivot": [-10, 15, -21],
+							"rotation": [32.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"east": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"south": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"west": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"up": {"uv": [0, 4], "uv_size": [4, -4]},
+								"down": {"uv": [0, 4], "uv_size": [4, -4]}
+							}
+						},
+						{
+							"origin": [-11.5, 11, -28],
+							"size": [3, 3, 5],
+							"pivot": [-10, 16, -23],
+							"rotation": [62.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"east": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"south": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"west": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"up": {"uv": [0, 4], "uv_size": [4, -4]},
+								"down": {"uv": [0, 4], "uv_size": [4, -4]}
+							}
+						},
+						{
+							"origin": [-12, 11, -29],
+							"size": [4, 3, 1],
+							"pivot": [-21, 16, -23],
+							"rotation": [62.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"east": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"south": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"west": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"up": {"uv": [0, 4], "uv_size": [4, -4]},
+								"down": {"uv": [0, 4], "uv_size": [4, -4]}
+							}
+						},
+						{
+							"origin": [-10.5, 7.78013, -20.79566],
+							"size": [1, 2, 1],
+							"pivot": [-9.5, 8.78013, -20.29566],
+							"rotation": [85, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"east": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"south": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"west": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"up": {"uv": [0, 4], "uv_size": [4, -4]},
+								"down": {"uv": [0, 4], "uv_size": [4, -4]}
+							}
+						},
+						{
+							"origin": [-12.13172, 8.02324, -21.01498],
+							"size": [1, 2, 1],
+							"pivot": [-11.63172, 9.02324, -20.51498],
+							"rotation": [94.17841, -13.27207, 7.05309],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"east": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"south": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"west": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"up": {"uv": [0, 4], "uv_size": [4, -4]},
+								"down": {"uv": [0, 4], "uv_size": [4, -4]}
+							}
+						},
+						{
+							"origin": [-8.86828, 8.02324, -21.01498],
+							"size": [1, 2, 1],
+							"pivot": [-8.36828, 9.02324, -20.51498],
+							"rotation": [94.17841, 13.27207, -7.05309],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 12]},
+								"east": {"uv": [0, 0], "uv_size": [4, 12]},
+								"south": {"uv": [0, 0], "uv_size": [4, 12]},
+								"west": {"uv": [0, 0], "uv_size": [4, 12]},
+								"up": {"uv": [4, 4], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 4], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"pivot": [5, 18, 0]
+				},
+				{
+					"name": "bone9",
+					"parent": "leftArm",
+					"pivot": [10, 15, -21],
+					"cubes": [
+						{
+							"origin": [8, 13, -23],
+							"size": [4, 7, 4],
+							"pivot": [10, 15, -21],
+							"rotation": [32.5, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 12]},
+								"east": {"uv": [0, 0], "uv_size": [4, 12]},
+								"south": {"uv": [0, 0], "uv_size": [4, 12]},
+								"west": {"uv": [0, 0], "uv_size": [4, 12]},
+								"up": {"uv": [4, 4], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 4], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [8.5, 11, -28],
+							"size": [3, 3, 5],
+							"pivot": [10, 16, -23],
+							"rotation": [62.5, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 12]},
+								"east": {"uv": [0, 0], "uv_size": [4, 12]},
+								"south": {"uv": [0, 0], "uv_size": [4, 12]},
+								"west": {"uv": [0, 0], "uv_size": [4, 12]},
+								"up": {"uv": [4, 4], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 4], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [8, 11, -29],
+							"size": [4, 3, 1],
+							"pivot": [21, 16, -23],
+							"rotation": [62.5, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 12]},
+								"east": {"uv": [0, 0], "uv_size": [4, 12]},
+								"south": {"uv": [0, 0], "uv_size": [4, 12]},
+								"west": {"uv": [0, 0], "uv_size": [4, 12]},
+								"up": {"uv": [4, 4], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 4], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [9.5, 7.78013, -20.79566],
+							"size": [1, 2, 1],
+							"pivot": [9.5, 8.78013, -20.29566],
+							"rotation": [85, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 12]},
+								"east": {"uv": [0, 0], "uv_size": [4, 12]},
+								"south": {"uv": [0, 0], "uv_size": [4, 12]},
+								"west": {"uv": [0, 0], "uv_size": [4, 12]},
+								"up": {"uv": [4, 4], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 4], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [11.13172, 8.02324, -21.01498],
+							"size": [1, 2, 1],
+							"pivot": [11.63172, 9.02324, -20.51498],
+							"rotation": [94.17841, 13.27207, -7.05309],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 12]},
+								"east": {"uv": [0, 0], "uv_size": [4, 12]},
+								"south": {"uv": [0, 0], "uv_size": [4, 12]},
+								"west": {"uv": [0, 0], "uv_size": [4, 12]},
+								"up": {"uv": [4, 4], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 4], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [7.86828, 8.02324, -21.01498],
+							"size": [1, 2, 1],
+							"pivot": [8.36828, 9.02324, -20.51498],
+							"rotation": [94.17841, -13.27207, 7.05309],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"east": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"south": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"west": {"uv": [4, 0], "uv_size": [-4, 12]},
+								"up": {"uv": [0, 4], "uv_size": [4, -4]},
+								"down": {"uv": [0, 4], "uv_size": [4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"pivot": [0.1, 12, -4]
+				},
+				{
+					"name": "bone5",
+					"parent": "rightLeg",
+					"pivot": [0.1, 12, -4]
+				},
+				{
+					"name": "bone6",
+					"parent": "bone5",
+					"pivot": [-6, 0, 2],
+					"cubes": [
+						{
+							"origin": [-13.11, -0.09, -1.11],
+							"size": [7.2, 4.2, 8.2],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [-13.80562, 0.2, -2.21332],
+							"size": [2.2, 2.8, 2],
+							"pivot": [-12.70562, 1.51, -1.21332],
+							"rotation": [-20, 37.5, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [-13.3, 1.4, -5.21332],
+							"size": [1.2, 1.8, 4],
+							"pivot": [-12.70562, 2.51, -1.21332],
+							"rotation": [22.5, 37.5, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [-10.3, 1.5, -5.5],
+							"size": [1.2, 1.8, 4],
+							"pivot": [-9.70562, 2.51, -1.21332],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [-6.9, 1.4, -5.21332],
+							"size": [1.2, 1.8, 4],
+							"pivot": [-6.29438, 2.51, -1.21332],
+							"rotation": [22.5, -37.5, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [-10.80562, 0.4, -2.6],
+							"size": [2.2, 2.8, 2],
+							"pivot": [-9.70562, 1.51, -2.21332],
+							"rotation": [-20, 0, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [-7.39438, 0.2, -2.21332],
+							"size": [2.2, 2.8, 2],
+							"pivot": [-6.29438, 1.51, -1.21332],
+							"rotation": [-20, -37.5, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone7",
+					"parent": "bone5",
+					"pivot": [-9.51, 8.61, 1.99],
+					"cubes": [
+						{
+							"origin": [-14.11, 3.11, -3.11],
+							"size": [9.2, 11, 10.2],
+							"pivot": [-9.51, 8.61, 1.99],
+							"rotation": [12.5, 0, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone8",
+					"parent": "bone5",
+					"pivot": [-9.51, 16.93222, 0.3667],
+					"cubes": [
+						{
+							"origin": [-13.11, 11.93222, -4.5],
+							"size": [7.2, 7, 11.2],
+							"pivot": [-9.51, 16.93222, 0.3667],
+							"rotation": [-9.75464, 0, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [-14.11, 18.93222, -5.5],
+							"size": [8.2, 13, 13.2],
+							"pivot": [-9.51, 16.93222, 0.3667],
+							"rotation": [-9.75464, 0, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"pivot": [-0.1, 12, 0]
+				},
+				{
+					"name": "bone2",
+					"parent": "leftLeg",
+					"pivot": [-0.1, 12, -4]
+				},
+				{
+					"name": "bone3",
+					"parent": "bone2",
+					"pivot": [6, 0, 2],
+					"cubes": [
+						{
+							"origin": [5.91, -0.09, -1.11],
+							"size": [7.2, 4.2, 8.2],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [11.60562, 0.2, -2.21332],
+							"size": [2.2, 2.8, 2],
+							"pivot": [12.70562, 1.51, -1.21332],
+							"rotation": [-20, -37.5, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [12.1, 1.4, -5.21332],
+							"size": [1.2, 1.8, 4],
+							"pivot": [12.70562, 2.51, -1.21332],
+							"rotation": [22.5, -37.5, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [9.1, 1.5, -5.5],
+							"size": [1.2, 1.8, 4],
+							"pivot": [9.70562, 2.51, -1.21332],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [5.7, 1.4, -5.21332],
+							"size": [1.2, 1.8, 4],
+							"pivot": [6.29438, 2.51, -1.21332],
+							"rotation": [22.5, 37.5, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						},
+						{
+							"origin": [8.60562, 0.4, -2.6],
+							"size": [2.2, 2.8, 2],
+							"pivot": [9.70562, 1.51, -2.21332],
+							"rotation": [-20, 0, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [5.19438, 0.2, -2.21332],
+							"size": [2.2, 2.8, 2],
+							"pivot": [6.29438, 1.51, -1.21332],
+							"rotation": [-20, 37.5, 0],
+							"uv": {
+								"north": {"uv": [40, 0], "uv_size": [-9, 34]},
+								"east": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"south": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"west": {"uv": [51, 0], "uv_size": [-9, 34]},
+								"up": {"uv": [40, 12], "uv_size": [-4, 4]},
+								"down": {"uv": [50, 33], "uv_size": [-2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone4",
+					"parent": "bone2",
+					"pivot": [9.51, 8.61, 1.99],
+					"cubes": [
+						{
+							"origin": [4.91, 3.11, -3.11],
+							"size": [9.2, 11, 10.2],
+							"pivot": [9.51, 8.61, 1.99],
+							"rotation": [12.5, 0, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone11",
+					"parent": "bone2",
+					"pivot": [9.51, 16.93222, 0.3667],
+					"cubes": [
+						{
+							"origin": [5.91, 11.93222, -4.5],
+							"size": [7.2, 7, 11.2],
+							"pivot": [9.51, 16.93222, 0.3667],
+							"rotation": [-9.75464, 0, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [5.91, 18.93222, -5.5],
+							"size": [8.2, 13, 13.2],
+							"pivot": [9.51, 16.93222, 0.3667],
+							"rotation": [-9.75464, 0, 0],
+							"uv": {
+								"north": {"uv": [31, 0], "uv_size": [9, 34]},
+								"east": {"uv": [42, 0], "uv_size": [9, 34]},
+								"south": {"uv": [42, 0], "uv_size": [9, 34]},
+								"west": {"uv": [42, 0], "uv_size": [9, 34]},
+								"up": {"uv": [36, 12], "uv_size": [4, 4]},
+								"down": {"uv": [48, 33], "uv_size": [2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightItem",
+					"pivot": [-6, 15, 1]
+				}
+			]
+		}
+	]
+}

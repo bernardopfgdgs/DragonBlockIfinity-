@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: dragonblockinfinity
+Specification-Vendor: Bernardo
+Specification-Version: 1
+Implementation-Title: DragonBlockIfinity-
+Implementation-Version: 1.0.0
+Implementation-Vendor: Bernardo
+Implementation-Timestamp: 2026-02-06T18:32:14+0000
+
