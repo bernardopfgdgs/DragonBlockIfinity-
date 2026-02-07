@@ -1,44 +1,40 @@
-]633;E;echo "================================================================================";94bb0084-504d-4b32-a797-d28eaad82a71]633;C================================================================================
-ESTRUTURA DO PROJETO
-================================================================================
-
-src/
-└── main/
-    ├── java/
-    │   └── com/
-    │       └── dragonblockinfinity/
+src
+└── main
+    ├── java
+    │   └── com
+    │       └── dragonblockinfinity
     │           ├── DragonBlockInfinity.java
-    │           ├── client/
-    │           │   ├── event/
-    │           │   ├── gui/
-    │           │   │   ├── hud/
-    │           │   │   ├── overlay/
-    │           │   │   └── screen/
+    │           ├── client
+    │           │   ├── event
+    │           │   ├── gui
+    │           │   │   ├── hud
+    │           │   │   ├── overlay
+    │           │   │   └── screen
     │           │   │       └── MenuInicial1.java
-    │           │   ├── hud/
-    │           │   ├── input/
-    │           │   ├── keybind/
+    │           │   ├── hud
+    │           │   ├── input
+    │           │   ├── keybind
     │           │   │   └── KeyMenu1.java
-    │           │   ├── ki/
-    │           │   └── renderer/
-    │           ├── common/
-    │           │   ├── blocks/
-    │           │   ├── capability/
-    │           │   ├── entity/
-    │           │   ├── event/
-    │           │   ├── fightstyle/
+    │           │   ├── ki
+    │           │   └── renderer
+    │           ├── common
+    │           │   ├── blocks
+    │           │   ├── capability
+    │           │   ├── entity
+    │           │   ├── event
+    │           │   ├── fightstyle
     │           │   │   ├── FightStyleEnum.java
     │           │   │   ├── IFightStyle.java
     │           │   │   ├── MartialArts.java
     │           │   │   ├── Spiritualist.java
     │           │   │   └── Warrior.java
-    │           │   ├── forms/
+    │           │   ├── forms
     │           │   │   └── BaseForm.java
-    │           │   ├── items/
-    │           │   ├── ki/
+    │           │   ├── items
+    │           │   ├── ki
     │           │   │   └── KiFunction.java
-    │           │   ├── network/
-    │           │   ├── race/
+    │           │   ├── network
+    │           │   ├── race
     │           │   │   ├── Arcosian.java
     │           │   │   ├── HalfSaiyan.java
     │           │   │   ├── Human.java
@@ -46,7 +42,7 @@ src/
     │           │   │   ├── Namekian.java
     │           │   │   ├── RaceEnum.java
     │           │   │   └── Saiyan.java
-    │           │   └── stats/
+    │           │   └── stats
     │           │       ├── Constitution.java
     │           │       ├── Dexterity.java
     │           │       ├── Mind.java
@@ -54,21 +50,21 @@ src/
     │           │       ├── Spirit.java
     │           │       ├── Strength.java
     │           │       └── Willpower.java
-    │           ├── config/
-    │           ├── registry/
-    │           └── util/
+    │           ├── config
+    │           ├── registry
+    │           └── util
     │               └── Constants.java
-    └── resources/
-        ├── META-INF/
+    └── resources
+        ├── META-INF
         │   └── mods.toml
-        ├── assets/
-        │   └── dragonblockinfinity/
-        │       ├── blockstates/
-        │       ├── lang/
+        ├── assets
+        │   └── dragonblockinfinity
+        │       ├── blockstates
+        │       ├── lang
         │       │   ├── en_us.json
         │       │   └── pt_br.json
-        │       ├── models/
-        │       │   ├── block/
+        │       ├── models
+        │       │   ├── block
         │       │   │   ├── dirty_stone.json
         │       │   │   ├── dragon_block1_earth.json
         │       │   │   ├── dragon_block2_earth.json
@@ -78,9 +74,9 @@ src/
         │       │   │   ├── dragon_block6_earth.json
         │       │   │   ├── dragon_block_7_earth.json
         │       │   │   └── namek_stone.json
-        │       │   ├── entity/
+        │       │   ├── entity
         │       │   │   └── nuvem.geo.json
-        │       │   ├── item/
+        │       │   ├── item
         │       │   │   ├── comida.json
         │       │   │   ├── dino_meat.json
         │       │   │   ├── dino_meat_cooked.json
@@ -93,12 +89,12 @@ src/
         │       │   │   ├── radar.json
         │       │   │   ├── scouter.json
         │       │   │   └── senzu.json
-        │       │   └── mobs/
+        │       │   └── mobs
         │       │       └── Dinossauro.json
-        │       ├── sounds/
+        │       ├── sounds
         │       │   └── passos.ogg
-        │       └── textures/
-        │           ├── blocks/
+        │       └── textures
+        │           ├── blocks
         │           │   ├── block_dirty_stone_cobblestone.png
         │           │   ├── block_dirty_stone_stone.png
         │           │   ├── block_dragon_block1_earth.png
@@ -112,79 +108,68 @@ src/
         │           │   ├── block_namek_grass_top.png
         │           │   ├── block_namek_log_side.png
         │           │   └── block_namek_log_top.png
-        │           ├── entity/
-        │           │   ├── customizacao/
-        │           │   │   ├── eye/
+        │           ├── entity
+        │           │   ├── customizacao
+        │           │   │   ├── eye
         │           │   │   │   ├── eye_1_left.png
         │           │   │   │   └── eye_1_right.png
-        │           │   │   └── hair/
+        │           │   │   └── hair
         │           │   │       ├── careca.png
         │           │   │       ├── hair_base1.png
         │           │   │       ├── hair_base2.png
         │           │   │       ├── hair_base3.png
         │           │   │       ├── hair_base4.png
         │           │   │       ├── hair_base6.png
-        │           │   │       └── hairoverlay/
+        │           │   │       └── hairoverlay
         │           │   │           ├── hair_1_overlay.png
         │           │   │           ├── hair_2_overlay.png
         │           │   │           ├── hair_3_overlay.png
         │           │   │           └── hair_4_overlay.png
-        │           │   ├── mobs/
-        │           │   │   └── dino/
-        │           │   │       └── dinossauro.png*
-        │           │   ├── musculosrace/
+        │           │   ├── mobs
+        │           │   │   └── dino
+        │           │   │       └── dinossauro.png
+        │           │   ├── musculosrace
         │           │   │   ├── musculos.png
         │           │   │   └── musculos_arconsian.png
-        │           │   ├── race/
+        │           │   ├── race
         │           │   │   ├── arconsian.png
         │           │   │   ├── fsayajin.png
         │           │   │   ├── humano.png
         │           │   │   ├── namkian.png
         │           │   │   └── sayajin.png
-        │           │   └── tail/
+        │           │   └── tail
         │           │       ├── tail_arconsian.png
         │           │       └── tail_half_sayan.png
-        │           ├── gui/
-        │           │   ├── buttoes/
-        │           │   │   ├── maiss.png
-        │           │   │   ├── maissn.png
-        │           │   │   ├── rt.png
-        │           │   │   ├── rtn.png
-        │           │   │   ├── seta_left.png
-        │           │   │   ├── seta_right.png
-        │           │   │   └── x.png
-        │           │   ├── huds/
-        │           │   │   ├── health.png
+        │           ├── gui
+        │           │   ├── buttoes
+        │           │   ├── huds
+        │           │   │   ├── icons_hud.png
         │           │   │   ├── ki_attck_chargin.png
-        │           │   │   ├── ki_attck_charging.png.mcmeta
-        │           │   │   ├── ki_bar_good.png
-        │           │   │   ├── ki_bar_good_empty.png
-        │           │   │   ├── ki_bar_good_fx.png
-        │           │   │   └── ki_bar_good_fx.png.mcmeta
-        │           │   └── menus/
+        │           │   │   └── ki_attck_charging.png.mcmeta
+        │           │   └── menus
         │           │       ├── menu_base.png
         │           │       └── mn.png
-        │           ├── item/
-        │           │   ├── Dragon/
+        │           ├── item
+        │           │   ├── Dragon
         │           │   │   ├── item_dragon_block.png
         │           │   │   └── item_radar.png
-        │           │   ├── blocks/
+        │           │   ├── blocks
         │           │   │   ├── item_dirty_stone_dirty.png
         │           │   │   └── item_grass_namek.png
-        │           │   ├── comida/
+        │           │   ├── comida
         │           │   │   ├── item_dino_meat.png
         │           │   │   └── item_dino_meat_cooked.png
-        │           │   ├── ninbus/
+        │           │   ├── ninbus
         │           │   │   ├── item_dark_fly_ninbus.png
         │           │   │   └── item_fly_ninbus.png
-        │           │   ├── pesos/
+        │           │   ├── pesos
         │           │   │   └── item_peso1.png
-        │           │   └── scouter/
+        │           │   └── scouter
         │           │       └── item_scouter.png
-        │           ├── models/
+        │           ├── models
         │           │   └── peso1.png
-        │           └── particules/
-        │               ├── aura/
+        │           └── particules
+        │               ├── aura
         │               │   ├── ki_aura.png
         │               │   ├── ki_aura.png.mcmeta
         │               │   ├── ki_aura_ssj1.png
@@ -197,1023 +182,24 @@ src/
         │               └── hit_clash.png.mcmeta
         └── pack.mcmeta
 
-69 directories, 125 files
+69 directories, 114 files
 
 
-================================================================================
-CÓDIGOS DOS ARQUIVOS
-================================================================================
+=== ARQUIVOS JSON ===
 
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/client/gui/screen/MenuInicial1.java
-################################################################################
-
-package com.dragonblockinfinity.client.gui.screen;
-
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.client.gui.GuiGraphics;
-
-public class MenuInicial1 extends Screen {
-
-    private static final ResourceLocation MENU_TEXTURE = new ResourceLocation("dragonblockinfinity", "textures/gui/menus/menu_base.png");
-    private static final int MENU_WIDTH = 256;
-    private static final int MENU_HEIGHT = 200;
-
-    private int currentRaceIndex = 0;
-    private int currentHairIndex = 0;
-    private int currentEyeIndex = 0;
-
-    private static final String[] RACES = {"Saiyan", "Namekian", "Human", "Majin"};
-    private static final String[] HAIRS = {"Hair1", "Hair2", "Hair3"};
-    private static final String[] EYES = {"Eye1", "Eye2", "Eye3"};
-
-    public MenuInicial1() {
-        super(Component.literal("Menu Inicial"));
-    }
-
-    @Override
-    protected void init() {
-        int centerX = (this.width - MENU_WIDTH) / 2;
-        int centerY = (this.height - MENU_HEIGHT) / 2;
-
-        // Race buttons
-        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
-            currentRaceIndex = (currentRaceIndex - 1 + RACES.length) % RACES.length;
-        }).pos(centerX + 200, centerY + 20).size(20, 20).build());
-        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
-            currentRaceIndex = (currentRaceIndex + 1) % RACES.length;
-        }).pos(centerX + 230, centerY + 20).size(20, 20).build());
-
-        // Hair buttons
-        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
-            currentHairIndex = (currentHairIndex - 1 + HAIRS.length) % HAIRS.length;
-        }).pos(centerX + 200, centerY + 50).size(20, 20).build());
-        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
-            currentHairIndex = (currentHairIndex + 1) % HAIRS.length;
-        }).pos(centerX + 230, centerY + 50).size(20, 20).build());
-
-        // Eye buttons
-        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
-            currentEyeIndex = (currentEyeIndex - 1 + EYES.length) % EYES.length;
-        }).pos(centerX + 200, centerY + 80).size(20, 20).build());
-        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
-            currentEyeIndex = (currentEyeIndex + 1) % EYES.length;
-        }).pos(centerX + 230, centerY + 80).size(20, 20).build());
-    }
-
-    @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-        int centerX = (this.width - MENU_WIDTH) / 2;
-        int centerY = (this.height - MENU_HEIGHT) / 2;
-        RenderSystem.setShaderTexture(0, MENU_TEXTURE);
-        guiGraphics.blit(MENU_TEXTURE, centerX, centerY, 0, 0, MENU_WIDTH, MENU_HEIGHT);
-
-        guiGraphics.drawCenteredString(this.font, "Raça: " + RACES[currentRaceIndex], centerX + 215, centerY + 20, 0xFFFFFF);
-        guiGraphics.drawCenteredString(this.font, "Cabelo: " + HAIRS[currentHairIndex], centerX + 215, centerY + 50, 0xFFFFFF);
-        guiGraphics.drawCenteredString(this.font, "Olhos: " + EYES[currentEyeIndex], centerX + 215, centerY + 80, 0xFFFFFF);
-
-        super.render(guiGraphics, mouseX, mouseY, partialTicks);
-    }
-
-    @Override
-    public boolean isPauseScreen() {
-        return false;
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/client/keybind/KeyMenu1.java
-################################################################################
-
-package com.dragonblockinfinity.client.keybind;
-
-import net.minecraft.client.KeyMapping;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
-import net.minecraftforge.client.event.InputEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import org.lwjgl.glfw.GLFW;
-import com.dragonblockinfinity.client.gui.screen.MenuInicial1;
-import net.minecraft.client.Minecraft;
-
-@Mod.EventBusSubscriber(modid = "dragonblockinfinity", value = Dist.CLIENT)
-public class KeyMenu1 {
-    public static final KeyMapping CUSTOMIZATION_MENU_KEY = new KeyMapping(
-        "key.dragonblockinfinity.customization_menu",
-        GLFW.GLFW_KEY_M,
-        "key.categories.dragonblockinfinity"
-    );
-
-    @SubscribeEvent
-    public static void registerKeys(RegisterKeyMappingsEvent event) {
-        event.register(CUSTOMIZATION_MENU_KEY);
-    }
-
-    @SubscribeEvent
-    public static void onKeyInput(InputEvent.Key event) {
-        if (CUSTOMIZATION_MENU_KEY.consumeClick()) {
-            Minecraft.getInstance().setScreen(new MenuInicial1());
-        }
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/DragonBlockInfinity.java
-################################################################################
-
-package com.dragonblockinfinity;
-
-import com.dragonblockinfinity.util.Constants;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-
-@Mod(Constants.MOD_ID)
-public class DragonBlockInfinity {
-    public static final DragonBlockInfinity INSTANCE = new DragonBlockInfinity();
-
-    public DragonBlockInfinity() {
-        // Registro de eventos
-        Mod.EventBusSubscriber.Bus.MOD.bus().get().register(this);
-    }
-
-    @SubscribeEvent
-    public void onCommonSetup(FMLCommonSetupEvent event) {
-        // Configuração comum
-    }
-
-    @SubscribeEvent
-    public void onClientSetup(FMLClientSetupEvent event) {
-        // Configuração do cliente
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        // Configuração do servidor
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/util/Constants.java
-################################################################################
-
-package com.dragonblockinfinity.util;
-
-public class Constants {
-    public static final String MOD_ID = "DragonBlockInfinity";
-    public static final String MOD_NAME = "Dragon Block Infinity";
-    public static final String MOD_VERSION = "1.0.0";
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/forms/BaseForm.java
-################################################################################
-
-package com.dragonblockinfinity.common.forms;
-
-public class BaseForm {
-   public String formNameBase;
-   public String formDescriptionBase;
-   
-   public String getFormNameBase() {
-      return formNameBase;
-   }
-   
-   public String getFormDescriptionBase() {
-      return formDescriptionBase;
-   }
-   private double masteryFormBase;
-   
-   public double getMasteryFormBase() {
-      return this.masteryFormBase;
-   }
-   public void setMasteryFormBase(double masteryFormBase) {
-    this.masteryFormBase = masteryFormBase;
-   }
-   
-   public void addMasteryFormBase(double ganho) {
-      this.masteryFormBase += ganho;
-   }
-   public double getMultiplierstats() {
-      return 1 + (masteryFormBase * 0.005);
-   }
-   public void gainMasteryOnHit() {
-      this.masteryFormBase += 0.1;
-   }
-   public void gainMasteryOnDamage(double damage) {
-      double ganho = damage * 0.01;
-      this.masteryFormBase += ganho;
-   }
-   public void capMasteryFormBase() {
-   if (this.masteryFormBase > 100) {
-      this.masteryFormBase = 100;
-   }
-}
-   
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/Warrior.java
-################################################################################
-
-package com.dragonblockinfinity.common.fightstyle;
-
-public class Warrior implements IFightStyle {
-    
-    @Override public double getStrengthMultiplier() { return 2.2; }
-    @Override public double getConstitutionMultiplier() { return 2.0; }
-    @Override public double getDexterityMultiplier() { return 1.2; }
-    @Override public double getWillMultiplier() { return 0.8; }
-    @Override public double getSpiritMultiplier() { return 0.5; }
-    @Override public double getMindMultiplier() { return 0.8; }
-    
-    @Override public int getBaseStrength() { return 14; }
-    @Override public int getBaseConstitution() { return 13; }
-    @Override public int getBaseDexterity() { return 10; }
-    @Override public int getBaseWillpower() { return 9; }
-    @Override public int getBaseSpirit() { return 8; }
-    @Override public int getBaseMind() { return 9; }
-    
-    @Override public String getStyleName() { return "Guerreiro"; }
-    @Override public String getStyleDescription() { 
-        return "Focado em força e resistência corporal. Excelente em combate corpo a corpo mas fraco em Ki."; 
-    }
-    
-    @Override
-    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
-        return (int)(
-            (str * getStrengthMultiplier()) +
-            (con * getConstitutionMultiplier()) +
-            (dex * getDexterityMultiplier()) +
-            (will * getWillMultiplier()) +
-            (spi * getSpiritMultiplier()) +
-            (mnd * getMindMultiplier())
-        );
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/Spiritualist.java
-################################################################################
-
-package com.dragonblockinfinity.common.fightstyle;
-
-public class Spiritualist implements IFightStyle {
-    
-    @Override public double getStrengthMultiplier() { return 0.5; }
-    @Override public double getConstitutionMultiplier() { return 0.8; }
-    @Override public double getDexterityMultiplier() { return 1.2; }
-    @Override public double getWillMultiplier() { return 2.0; }
-    @Override public double getSpiritMultiplier() { return 2.2; }
-    @Override public double getMindMultiplier() { return 1.0; }
-    
-    @Override public int getBaseStrength() { return 8; }
-    @Override public int getBaseConstitution() { return 9; }
-    @Override public int getBaseDexterity() { return 10; }
-    @Override public int getBaseWillpower() { return 13; }
-    @Override public int getBaseSpirit() { return 14; }
-    @Override public int getBaseMind() { return 11; }
-    
-    @Override public String getStyleName() { return "Espiritualista"; }
-    @Override public String getStyleDescription() { 
-        return "Focado em Ki e ataques mágicos. Excelente em ofensiva mágica mas fraco em combate corpo a corpo."; 
-    }
-    
-    @Override
-    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
-        return (int)(
-            (str * getStrengthMultiplier()) +
-            (con * getConstitutionMultiplier()) +
-            (dex * getDexterityMultiplier()) +
-            (will * getWillMultiplier()) +
-            (spi * getSpiritMultiplier()) +
-            (mnd * getMindMultiplier())
-        );
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/MartialArts.java
-################################################################################
-
-package com.dragonblockinfinity.common.fightstyle;
-
-public class MartialArts implements IFightStyle {
-    
-    @Override public double getStrengthMultiplier() { return 1.8; }
-    @Override public double getConstitutionMultiplier() { return 1.8; }
-    @Override public double getDexterityMultiplier() { return 1.8; }
-    @Override public double getWillMultiplier() { return 1.2; }
-    @Override public double getSpiritMultiplier() { return 1.2; }
-    @Override public double getMindMultiplier() { return 1.0; }
-    
-    @Override public int getBaseStrength() { return 11; }
-    @Override public int getBaseConstitution() { return 11; }
-    @Override public int getBaseDexterity() { return 12; }
-    @Override public int getBaseWillpower() { return 11; }
-    @Override public int getBaseSpirit() { return 11; }
-    @Override public int getBaseMind() { return 11; }
-    
-    @Override public String getStyleName() { return "Artes Marciais"; }
-    @Override public String getStyleDescription() { 
-        return "Estilo equilibrado e versátil. Bom em vários aspectos mas não se destaca em nenhum."; 
-    }
-    
-    @Override
-    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
-        return (int)(
-            (str * getStrengthMultiplier()) +
-            (con * getConstitutionMultiplier()) +
-            (dex * getDexterityMultiplier()) +
-            (will * getWillMultiplier()) +
-            (spi * getSpiritMultiplier()) +
-            (mnd * getMindMultiplier())
-        );
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/IFightStyle.java
-################################################################################
-
-package com.dragonblockinfinity.common.fightstyle;
-
-public interface IFightStyle {
-    
-    double getStrengthMultiplier();
-    double getConstitutionMultiplier();
-    double getDexterityMultiplier();
-    double getWillMultiplier();
-    double getSpiritMultiplier();
-    double getMindMultiplier();
-    
-    int getBaseStrength();
-    int getBaseConstitution();
-    int getBaseDexterity();
-    int getBaseWillpower();
-    int getBaseSpirit();
-    int getBaseMind();
-    
-    String getStyleName();
-    String getStyleDescription();
-    
-    int calculateBP(int str, int con, int dex, int will, int spi, int mnd);
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/fightstyle/FightStyleEnum.java
-################################################################################
-
-package com.dragonblockinfinity.common.fightstyle;
-
-public enum FightStyleEnum {
-    SPIRITUALIST("Espiritualista", "Focado em Ki e ataques mágicos"),
-    WARRIOR("Guerreiro", "Focado em força e resistência corporal"),
-    MARTIAL_ARTS("Artes Marciais", "Estilo equilibrado e versátil");
-    
-    private final String displayName;
-    private final String description;
-    
-    FightStyleEnum(String displayName, String description) {
-        this.displayName = displayName;
-        this.description = description;
-    }
-    
-    public String getDisplayName() {
-        return displayName;
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-    
-    @Override
-    public String toString() {
-        return displayName;
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/ki/KiFunction.java
-################################################################################
-
-package com.dragonblockinfinity.common.ki;
-
-import com.dragonblockinfinity.common.forms.BaseForm;
-
-public class KiFunction {
-    private int ki;
-    private int positiveKi;
-    private int negativeKi;
-    private int maxKi = 100; // Maximum Ki value
-    private int minKi = 0;   // Minimum Ki value
-    private int baseMaxKi = 100; // Base maximum Ki, affected by status
-
-    public KiFunction(int ki) {
-        this.ki = ki;
-        this.positiveKi = 0;
-        this.negativeKi = 0;
-    }
-
-    public int getKi() {
-        return ki;
-    }
-
-    public int getPositiveKi() {
-        return positiveKi;
-    }
-
-    public int getNegativeKi() {
-        return negativeKi;
-    }
-
-    public int getMaxKi() {
-        return maxKi;
-    }
-
-    public void setBaseMaxKi(int baseMaxKi) {
-        this.baseMaxKi = baseMaxKi;
-        updateMaxKi();
-    }
-
-    public void updateMaxKi() {
-        this.maxKi = baseMaxKi;
-        if (this.maxKi < minKi) {
-            this.maxKi = minKi;
-        }
-    }
-
-    public void addPositiveKi(int amount) {
-        this.positiveKi += amount;
-    }
-
-    public void addNegativeKi(int amount) {
-        this.negativeKi += amount;
-    }
-
-    public void useKi(int amount) {
-        if (ki >= amount) {
-            ki -= amount;
-        } else {
-            throw new IllegalArgumentException("Not enough Ki to perform this action.");
-        }
-    }
-
-    public void regenerateKi(int amount) {
-        this.ki = Math.min(this.ki + amount, maxKi);
-    }
-
-    public void passiveRegeneration() {
-        regenerateKi(5); // Regenerate 5 Ki per tick (example value)
-    }
-
-    public void checkKiThresholds() {
-        if (ki <= 10) {
-            triggerLowKiEvent();
-        } else if (ki >= maxKi - 10) {
-            triggerHighKiEvent();
-        }
-    }
-
-    private void triggerLowKiEvent() {
-        System.out.println("Warning: Ki is critically low!");
-        // Additional logic for low Ki event
-    }
-
-    private void triggerHighKiEvent() {
-        System.out.println("Ki is at maximum capacity!");
-        // Additional logic for high Ki event
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Namekian.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
-
-public class Namekian implements IRace {
-    
-    @Override public int getMaxKiBase() { return 4500; }
-    @Override public double getKiMultiplier() { return 1.8; }
-    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.SPIRITUALIST; }
-    
-    @Override public int getBaseStrength() { return 9; }
-    @Override public int getBaseConstitution() { return 10; }
-    @Override public int getBaseDexterity() { return 10; }
-    @Override public int getBaseWillpower() { return 14; }
-    @Override public int getBaseSpirit() { return 15; }
-    @Override public int getBaseMind() { return 12; }
-    
-    @Override public String getRaceName() { return "Namekiano"; }
-    @Override public String getRaceDescription() { 
-        return "Místicos e regenerativos com grande afinidade com Ki"; 
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/IRace.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
-
-public interface IRace {
-    
-    int getMaxKiBase();
-    double getKiMultiplier();
-    FightStyleEnum getPreferredFightStyle();
-    
-    int getBaseStrength();
-    int getBaseConstitution();
-    int getBaseDexterity();
-    int getBaseWillpower();
-    int getBaseSpirit();
-    int getBaseMind();
-    
-    String getRaceName();
-    String getRaceDescription();
-    
-    default int calculateMaxKi() {
-        return (int)(getMaxKiBase() * getKiMultiplier());
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/RaceEnum.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-public enum RaceEnum {
-    SAIYAN("Saiyajin", "Guerreiros natos com grande potencial"),
-    HALF("Metade-Saiyajin", "Híbrido com potencial extraordinário"),
-    HUMAN("Humano", "Adaptável e determinado"),
-    ARCONSIAN("Arconsiano", "Guerreiro galáctico frio e poderoso"),
-    NAMEKIAN("Namekiano", "Místicos e regenerativos");
-    
-    private final String displayName;
-    private final String description;
-    
-    RaceEnum(String displayName, String description) {
-        this.displayName = displayName;
-        this.description = description;
-    }
-    
-    public String getDisplayName() {
-        return displayName;
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-    
-    @Override
-    public String toString() {
-        return displayName;
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/HalfSaiyan.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
-
-public class HalfSaiyan implements IRace {
-    
-    @Override public int getMaxKiBase() { return 4000; }
-    @Override public double getKiMultiplier() { return 1.4; }
-    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.MARTIAL_ARTS; }
-    
-    @Override public int getBaseStrength() { return 12; }
-    @Override public int getBaseConstitution() { return 11; }
-    @Override public int getBaseDexterity() { return 11; }
-    @Override public int getBaseWillpower() { return 10; }
-    @Override public int getBaseSpirit() { return 11; }
-    @Override public int getBaseMind() { return 10; }
-    
-    @Override public String getRaceName() { return "Half-Saiyajin"; }
-    @Override public String getRaceDescription() { 
-        return "Híbrido com potencial extraordinário"; 
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Saiyan.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
-
-public class Saiyan implements IRace {
-    
-    @Override public int getMaxKiBase() { return 5000; }
-    @Override public double getKiMultiplier() { return 1.5; }
-    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.WARRIOR; }
-    
-    @Override public int getBaseStrength() { return 15; }
-    @Override public int getBaseConstitution() { return 14; }
-    @Override public int getBaseDexterity() { return 12; }
-    @Override public int getBaseWillpower() { return 10; }
-    @Override public int getBaseSpirit() { return 10; }
-    @Override public int getBaseMind() { return 8; }
-    
-    @Override public String getRaceName() { return "Saiyajin"; }
-    @Override public String getRaceDescription() { 
-        return "Guerreiros natos com grande potencial de poder e transformações"; 
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Arcosian.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
-
-public class Arcosian implements IRace {
-    
-    @Override public int getMaxKiBase() { return 6000; }
-    @Override public double getKiMultiplier() { return 1.8; }
-    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.WARRIOR; }
-    
-    @Override public int getBaseStrength() { return 14; }
-    @Override public int getBaseConstitution() { return 13; }
-    @Override public int getBaseDexterity() { return 9; }
-    @Override public int getBaseWillpower() { return 9; }
-    @Override public int getBaseSpirit() { return 9; }
-    @Override public int getBaseMind() { return 10; }
-    
-    @Override public String getRaceName() { return "Arcosian"; }
-    @Override public String getRaceDescription() { 
-        return "Tirano intergaláctico com poder lendário"; 
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/race/Human.java
-################################################################################
-
-package com.dragonblockinfinity.common.race;
-
-import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
-
-public class Human implements IRace {
-    
-    @Override public int getMaxKiBase() { return 3000; }
-    @Override public double getKiMultiplier() { return 1.0; }
-    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.MARTIAL_ARTS; }
-    
-    @Override public int getBaseStrength() { return 11; }
-    @Override public int getBaseConstitution() { return 11; }
-    @Override public int getBaseDexterity() { return 11; }
-    @Override public int getBaseWillpower() { return 11; }
-    @Override public int getBaseSpirit() { return 11; }
-    @Override public int getBaseMind() { return 12; }
-    
-    @Override public String getRaceName() { return "Humano"; }
-    @Override public String getRaceDescription() { 
-        return "Adaptável e determinado com grande potencial de aprendizado"; 
-    }
-}
-
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Constitution.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class Constitution {
-    private double value;
-
-    public Constitution(double value) {
-        this.value = value;
-    }
-
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
-    }
-
-    public boolean isDamageAndKnockbackNullified(double enemyDamage, double currentStamina) {
-        if (value > enemyDamage && currentStamina > 0) {
-            return true; // Dano e knockback anulados
-        }
-        return false;
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Dexterity.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class Dexterity {
-    private double value;
-
-    public Dexterity(double value) {
-        this.value = value;
-    }
-
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
-    }
-
-    // Multiplicador base de Dexteridade
-    public double getMultiplier() {
-        return 1 + (value * 0.01); // Multiplicador baseado no valor de Dexterity
-    }
-
-    // Defesa passiva (redução de dano)
-    public double getPassiveDefense() {
-        return value * 0.5; // Redução passiva de dano
-    }
-
-    // Redução de dano passiva
-    public double getDamageReduction() {
-        return (value * 0.5) / 100.0; // Reduz dano em 0.5% por ponto de Dexterity
-    }
-
-    public double calculateDodgeChance(double enemyDamage) {
-        if (value >= 2.9 * enemyDamage) {
-            return 7.0 * getMultiplier(); // Multiplica a esquiva
-        }
-        return 0.0;
-    }
-
-    public double calculateKnockbackReduction(double enemyDamage) {
-        if (value >= 2.9 * enemyDamage) {
-            return 0.7 * getMultiplier(); // Multiplica a redução de knockback
-        }
-        return 1.0; // Sem redução
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Strength.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class Strength {
-    private double value;
-
-    public Strength(double value) {
-        this.value = value;
-    }
-
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
-    }
-
-    public double calculateStaminaCost(double con, double stamina) {
-        if (value > con) {
-            return stamina * (1 + (value - con) * 0.1); // Gasto maior
-        } else {
-            return stamina * (1 - (con - value) * 0.05); // Gasto menor
-        }
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Willpower.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class Willpower {
-    private double kiAttackPower;
-
-    public Willpower(double kiAttackPower) {
-        this.kiAttackPower = kiAttackPower;
-    }
-
-    public double getKiAttackPower() {
-        return kiAttackPower;
-    }
-
-    public void setKiAttackPower(double kiAttackPower) {
-        this.kiAttackPower = kiAttackPower;
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Mind.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class Mind {
-    private double skillPoints;
-
-    public Mind(double skillPoints) {
-        this.skillPoints = skillPoints;
-    }
-
-    public double getSkillPoints() {
-        return skillPoints;
-    }
-
-    public void setSkillPoints(double skillPoints) {
-        this.skillPoints = skillPoints;
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/Spirit.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class Spirit {
-    private double maxKi;
-
-    public Spirit(double maxKi) {
-        this.maxKi = maxKi;
-    }
-
-    public double getMaxKi() {
-        return maxKi;
-    }
-
-    public void setMaxKi(double maxKi) {
-        this.maxKi = maxKi;
-    }
-}
-
-################################################################################
-# Arquivo: src/main/java/com/dragonblockinfinity/common/stats/PlayerStats.java
-################################################################################
-
-package com.dragonblockinfinity.common.stats;
-
-public class PlayerStats {
-    private double str; // Força
-    private double spi; // Ki Máximo
-    private double will; // Força do ataque de Ki
-    private double mnd; // Moeda para upar skills e formas
-    private double con; // Vida e Stamina Máxima
-    private double dex; // Velocidade e Vida
-
-    // Construtor
-    public PlayerStats(double str, double spi, double will, double mnd, double con, double dex) {
-        this.str = str;
-        this.spi = spi;
-        this.will = will;
-        this.mnd = mnd;
-        this.con = con;
-        this.dex = dex;
-    }
-
-    // Getters e Setters
-    public double getStr() {
-        return str;
-    }
-
-    public void setStr(double str) {
-        this.str = str;
-    }
-
-    public double getSpi() {
-        return spi;
-    }
-
-    public void setSpi(double spi) {
-        this.spi = spi;
-    }
-
-    public double getWill() {
-        return will;
-    }
-
-    public void setWill(double will) {
-        this.will = will;
-    }
-
-    public double getMnd() {
-        return mnd;
-    }
-
-    public void setMnd(double mnd) {
-        this.mnd = mnd;
-    }
-
-    public double getCon() {
-        return con;
-    }
-
-    public void setCon(double con) {
-        this.con = con;
-    }
-
-    public double getDex() {
-        return dex;
-    }
-
-    public void setDex(double dex) {
-        this.dex = dex;
-    }
-
-    // Cálculo de gasto de stamina baseado em Str e Con
-    public double calculateStaminaCost(double stamina) {
-        if (str > con) {
-            return stamina * (1 + (str - con) * 0.1); // Gasto maior
-        } else {
-            return stamina * (1 - (con - str) * 0.05); // Gasto menor
-        }
-    }
-
-    // Cálculo de esquiva baseado em Dex
-    public double calculateDodgeChance(double enemyDamage) {
-        if (dex >= 2.9 * enemyDamage) {
-            return 7.0; // 7% de esquiva
-        }
-        return 0.0;
-    }
-
-    // Redução de knockback baseado em Dex
-    public double calculateKnockbackReduction(double enemyDamage) {
-        if (dex >= 2.9 * enemyDamage) {
-            return 0.7; // Reduz knockback em 30%
-        }
-        return 1.0; // Sem redução
-    }
-
-    // Anulação de dano e knockback baseado em defesa real e stamina
-    public boolean isDamageAndKnockbackNullified(double enemyDamage, double currentStamina) {
-        if (con > enemyDamage && currentStamina > 0) {
-            return true; // Dano e knockback anulados
-        }
-        return false;
-    }
-}
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/lang/pt_br.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/lang/pt_br.json ---
 {
   "key.categories.dragonblockinfinity": "Dragon Block Infinity",
   "key.dragonblockinfinity.consume_ki": "Gastar Ki (Teste)"
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/lang/en_us.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/lang/en_us.json ---
 {
   "key.categories.dragonblockinfinity": "Dragon Block Infinity",
   "key.dragonblockinfinity.consume_ki": "Spend Ki (Test)"
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/entity/nuvem.geo.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/entity/nuvem.geo.json ---
 {
 	"format_version": "1.12.0",
 	"minecraft:geometry": [
@@ -1778,11 +764,7 @@ public class PlayerStats {
 		}
 	]
 }
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/nimbus.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/nimbus.json ---
 {
   "parent": "item/handheld",
   "textures": {
@@ -1797,11 +779,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dragon_esfer.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/dragon_esfer.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1814,11 +792,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/senzu.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/senzu.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1831,11 +805,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dino_meat_cooked.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/dino_meat_cooked.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1848,11 +818,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/radar.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/radar.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1865,11 +831,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/comida.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/comida.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1882,29 +844,17 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dirty_stone.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/dirty_stone.json ---
 {
   "parent": "dragonblockinfinity:block/dirty_stone"
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/namek_stone.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/namek_stone.json ---
 {
   "parent": "dragonblockinfinity:block/namek_stone"
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/dino_meat.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/dino_meat.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1917,11 +867,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/peso.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/peso.json ---
 {
   "parent": "item/handheld",
   "textures": {
@@ -1936,11 +882,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/scouter.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/scouter.json ---
 {
   "parent": "item/handheld",
   "textures": {
@@ -1955,11 +897,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/item/esfera_dragon_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/item/esfera_dragon_earth.json ---
 {
   "parent": "item/generated",
   "textures": {
@@ -1972,11 +910,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block2_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block2_earth.json ---
 {
   "elements": [
     {
@@ -2589,11 +1523,7 @@ public class PlayerStats {
   ]
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block3_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block3_earth.json ---
 {
   "elements": [
     {
@@ -3206,11 +2136,7 @@ public class PlayerStats {
   ]
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dirty_stone.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dirty_stone.json ---
 {
   "parent": "block/cube_all",
   "textures": {
@@ -3218,11 +2144,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/namek_stone.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/namek_stone.json ---
 {
   "parent": "block/cube_all",
   "textures": {
@@ -3230,11 +2152,7 @@ public class PlayerStats {
   }
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block1_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block1_earth.json ---
 {
   "elements": [
     {
@@ -3847,11 +2765,7 @@ public class PlayerStats {
   ]
 }
 
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block5_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block5_earth.json ---
 {
   "elements": [
     {
@@ -4463,11 +3377,7 @@ public class PlayerStats {
     }
   ]
 }
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block6_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block6_earth.json ---
 {
   "elements": [
     {
@@ -5079,11 +3989,7 @@ public class PlayerStats {
     }
   ]
 }
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block4_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block4_earth.json ---
 {
   "elements": [
     {
@@ -5695,11 +4601,7 @@ public class PlayerStats {
     }
   ]
 }
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/block/dragon_block_7_earth.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/block/dragon_block_7_earth.json ---
 {
   "elements": [
     {
@@ -6311,11 +5213,7 @@ public class PlayerStats {
     }
   ]
 }
-
-################################################################################
-# Arquivo: src/main/resources/assets/dragonblockinfinity/models/mobs/Dinossauro.json
-################################################################################
-
+--- src/main/resources/assets/dragonblockinfinity/models/mobs/Dinossauro.json ---
 {
 	"format_version": "1.12.0",
 	"minecraft:geometry": [
@@ -7659,3 +6557,948 @@ public class PlayerStats {
 		}
 	]
 }
+
+=== ARQUIVOS JAVA ===
+
+--- src/main/java/com/dragonblockinfinity/client/gui/screen/MenuInicial1.java ---
+package com.dragonblockinfinity.client.gui.screen;
+
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.client.gui.GuiGraphics;
+
+public class MenuInicial1 extends Screen {
+
+    private static final ResourceLocation MENU_TEXTURE = new ResourceLocation("dragonblockinfinity", "textures/gui/menus/menu_base.png");
+    private static final int MENU_WIDTH = 256;
+    private static final int MENU_HEIGHT = 200;
+
+    private int currentRaceIndex = 0;
+    private int currentHairIndex = 0;
+    private int currentEyeIndex = 0;
+
+    private static final String[] RACES = {"Saiyan", "Namekian", "Human", "Majin"};
+    private static final String[] HAIRS = {"Hair1", "Hair2", "Hair3"};
+    private static final String[] EYES = {"Eye1", "Eye2", "Eye3"};
+
+    public MenuInicial1() {
+        super(Component.literal("Menu Inicial"));
+    }
+
+    @Override
+    protected void init() {
+        int centerX = (this.width - MENU_WIDTH) / 2;
+        int centerY = (this.height - MENU_HEIGHT) / 2;
+
+        // Race buttons
+        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
+            currentRaceIndex = (currentRaceIndex - 1 + RACES.length) % RACES.length;
+        }).pos(centerX + 200, centerY + 20).size(20, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
+            currentRaceIndex = (currentRaceIndex + 1) % RACES.length;
+        }).pos(centerX + 230, centerY + 20).size(20, 20).build());
+
+        // Hair buttons
+        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
+            currentHairIndex = (currentHairIndex - 1 + HAIRS.length) % HAIRS.length;
+        }).pos(centerX + 200, centerY + 50).size(20, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
+            currentHairIndex = (currentHairIndex + 1) % HAIRS.length;
+        }).pos(centerX + 230, centerY + 50).size(20, 20).build());
+
+        // Eye buttons
+        this.addRenderableWidget(Button.builder(Component.literal("<"), b -> {
+            currentEyeIndex = (currentEyeIndex - 1 + EYES.length) % EYES.length;
+        }).pos(centerX + 200, centerY + 80).size(20, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal(">"), b -> {
+            currentEyeIndex = (currentEyeIndex + 1) % EYES.length;
+        }).pos(centerX + 230, centerY + 80).size(20, 20).build());
+    }
+
+    @Override
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+        int centerX = (this.width - MENU_WIDTH) / 2;
+        int centerY = (this.height - MENU_HEIGHT) / 2;
+        RenderSystem.setShaderTexture(0, MENU_TEXTURE);
+        guiGraphics.blit(MENU_TEXTURE, centerX, centerY, 0, 0, MENU_WIDTH, MENU_HEIGHT);
+
+        guiGraphics.drawCenteredString(this.font, "Raça: " + RACES[currentRaceIndex], centerX + 215, centerY + 20, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, "Cabelo: " + HAIRS[currentHairIndex], centerX + 215, centerY + 50, 0xFFFFFF);
+        guiGraphics.drawCenteredString(this.font, "Olhos: " + EYES[currentEyeIndex], centerX + 215, centerY + 80, 0xFFFFFF);
+
+        super.render(guiGraphics, mouseX, mouseY, partialTicks);
+    }
+
+    @Override
+    public boolean isPauseScreen() {
+        return false;
+    }
+}
+--- src/main/java/com/dragonblockinfinity/client/keybind/KeyMenu1.java ---
+package com.dragonblockinfinity.client.keybind;
+
+import net.minecraft.client.KeyMapping;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
+import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import org.lwjgl.glfw.GLFW;
+import com.dragonblockinfinity.client.gui.screen.MenuInicial1;
+import net.minecraft.client.Minecraft;
+
+@Mod.EventBusSubscriber(modid = "dragonblockinfinity", value = Dist.CLIENT)
+public class KeyMenu1 {
+    public static final KeyMapping CUSTOMIZATION_MENU_KEY = new KeyMapping(
+        "key.dragonblockinfinity.customization_menu",
+        GLFW.GLFW_KEY_M,
+        "key.categories.dragonblockinfinity"
+    );
+
+    @SubscribeEvent
+    public static void registerKeys(RegisterKeyMappingsEvent event) {
+        event.register(CUSTOMIZATION_MENU_KEY);
+    }
+
+    @SubscribeEvent
+    public static void onKeyInput(InputEvent.Key event) {
+        if (CUSTOMIZATION_MENU_KEY.consumeClick()) {
+            Minecraft.getInstance().setScreen(new MenuInicial1());
+        }
+    }
+}
+--- src/main/java/com/dragonblockinfinity/DragonBlockInfinity.java ---
+package com.dragonblockinfinity;
+
+import com.dragonblockinfinity.util.Constants;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+
+@Mod(Constants.MOD_ID)
+public class DragonBlockInfinity {
+    public static final DragonBlockInfinity INSTANCE = new DragonBlockInfinity();
+
+    public DragonBlockInfinity() {
+        // Registro de eventos
+        Mod.EventBusSubscriber.Bus.MOD.bus().get().register(this);
+    }
+
+    @SubscribeEvent
+    public void onCommonSetup(FMLCommonSetupEvent event) {
+        // Configuração comum
+    }
+
+    @SubscribeEvent
+    public void onClientSetup(FMLClientSetupEvent event) {
+        // Configuração do cliente
+    }
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        // Configuração do servidor
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/util/Constants.java ---
+package com.dragonblockinfinity.util;
+
+public class Constants {
+    public static final String MOD_ID = "DragonBlockInfinity";
+    public static final String MOD_NAME = "Dragon Block Infinity";
+    public static final String MOD_VERSION = "1.0.0";
+}
+
+--- src/main/java/com/dragonblockinfinity/common/forms/BaseForm.java ---
+package com.dragonblockinfinity.common.forms;
+
+public class BaseForm {
+   public String formNameBase;
+   public String formDescriptionBase;
+   
+   public String getFormNameBase() {
+      return formNameBase;
+   }
+   
+   public String getFormDescriptionBase() {
+      return formDescriptionBase;
+   }
+   private double masteryFormBase;
+   
+   public double getMasteryFormBase() {
+      return this.masteryFormBase;
+   }
+   public void setMasteryFormBase(double masteryFormBase) {
+    this.masteryFormBase = masteryFormBase;
+   }
+   
+   public void addMasteryFormBase(double ganho) {
+      this.masteryFormBase += ganho;
+   }
+   public double getMultiplierstats() {
+      return 1 + (masteryFormBase * 0.005);
+   }
+   public void gainMasteryOnHit() {
+      this.masteryFormBase += 0.1;
+   }
+   public void gainMasteryOnDamage(double damage) {
+      double ganho = damage * 0.01;
+      this.masteryFormBase += ganho;
+   }
+   public void capMasteryFormBase() {
+   if (this.masteryFormBase > 100) {
+      this.masteryFormBase = 100;
+   }
+}
+   
+}
+--- src/main/java/com/dragonblockinfinity/common/fightstyle/Warrior.java ---
+package com.dragonblockinfinity.common.fightstyle;
+
+public class Warrior implements IFightStyle {
+    
+    @Override public double getStrengthMultiplier() { return 2.2; }
+    @Override public double getConstitutionMultiplier() { return 2.0; }
+    @Override public double getDexterityMultiplier() { return 1.2; }
+    @Override public double getWillMultiplier() { return 0.8; }
+    @Override public double getSpiritMultiplier() { return 0.5; }
+    @Override public double getMindMultiplier() { return 0.8; }
+    
+    @Override public int getBaseStrength() { return 14; }
+    @Override public int getBaseConstitution() { return 13; }
+    @Override public int getBaseDexterity() { return 10; }
+    @Override public int getBaseWillpower() { return 9; }
+    @Override public int getBaseSpirit() { return 8; }
+    @Override public int getBaseMind() { return 9; }
+    
+    @Override public String getStyleName() { return "Guerreiro"; }
+    @Override public String getStyleDescription() { 
+        return "Focado em força e resistência corporal. Excelente em combate corpo a corpo mas fraco em Ki."; 
+    }
+    
+    @Override
+    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
+        return (int)(
+            (str * getStrengthMultiplier()) +
+            (con * getConstitutionMultiplier()) +
+            (dex * getDexterityMultiplier()) +
+            (will * getWillMultiplier()) +
+            (spi * getSpiritMultiplier()) +
+            (mnd * getMindMultiplier())
+        );
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/fightstyle/Spiritualist.java ---
+package com.dragonblockinfinity.common.fightstyle;
+
+public class Spiritualist implements IFightStyle {
+    
+    @Override public double getStrengthMultiplier() { return 0.5; }
+    @Override public double getConstitutionMultiplier() { return 0.8; }
+    @Override public double getDexterityMultiplier() { return 1.2; }
+    @Override public double getWillMultiplier() { return 2.0; }
+    @Override public double getSpiritMultiplier() { return 2.2; }
+    @Override public double getMindMultiplier() { return 1.0; }
+    
+    @Override public int getBaseStrength() { return 8; }
+    @Override public int getBaseConstitution() { return 9; }
+    @Override public int getBaseDexterity() { return 10; }
+    @Override public int getBaseWillpower() { return 13; }
+    @Override public int getBaseSpirit() { return 14; }
+    @Override public int getBaseMind() { return 11; }
+    
+    @Override public String getStyleName() { return "Espiritualista"; }
+    @Override public String getStyleDescription() { 
+        return "Focado em Ki e ataques mágicos. Excelente em ofensiva mágica mas fraco em combate corpo a corpo."; 
+    }
+    
+    @Override
+    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
+        return (int)(
+            (str * getStrengthMultiplier()) +
+            (con * getConstitutionMultiplier()) +
+            (dex * getDexterityMultiplier()) +
+            (will * getWillMultiplier()) +
+            (spi * getSpiritMultiplier()) +
+            (mnd * getMindMultiplier())
+        );
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/fightstyle/MartialArts.java ---
+package com.dragonblockinfinity.common.fightstyle;
+
+public class MartialArts implements IFightStyle {
+    
+    @Override public double getStrengthMultiplier() { return 1.8; }
+    @Override public double getConstitutionMultiplier() { return 1.8; }
+    @Override public double getDexterityMultiplier() { return 1.8; }
+    @Override public double getWillMultiplier() { return 1.2; }
+    @Override public double getSpiritMultiplier() { return 1.2; }
+    @Override public double getMindMultiplier() { return 1.0; }
+    
+    @Override public int getBaseStrength() { return 11; }
+    @Override public int getBaseConstitution() { return 11; }
+    @Override public int getBaseDexterity() { return 12; }
+    @Override public int getBaseWillpower() { return 11; }
+    @Override public int getBaseSpirit() { return 11; }
+    @Override public int getBaseMind() { return 11; }
+    
+    @Override public String getStyleName() { return "Artes Marciais"; }
+    @Override public String getStyleDescription() { 
+        return "Estilo equilibrado e versátil. Bom em vários aspectos mas não se destaca em nenhum."; 
+    }
+    
+    @Override
+    public int calculateBP(int str, int con, int dex, int will, int spi, int mnd) {
+        return (int)(
+            (str * getStrengthMultiplier()) +
+            (con * getConstitutionMultiplier()) +
+            (dex * getDexterityMultiplier()) +
+            (will * getWillMultiplier()) +
+            (spi * getSpiritMultiplier()) +
+            (mnd * getMindMultiplier())
+        );
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/fightstyle/IFightStyle.java ---
+package com.dragonblockinfinity.common.fightstyle;
+
+public interface IFightStyle {
+    
+    double getStrengthMultiplier();
+    double getConstitutionMultiplier();
+    double getDexterityMultiplier();
+    double getWillMultiplier();
+    double getSpiritMultiplier();
+    double getMindMultiplier();
+    
+    int getBaseStrength();
+    int getBaseConstitution();
+    int getBaseDexterity();
+    int getBaseWillpower();
+    int getBaseSpirit();
+    int getBaseMind();
+    
+    String getStyleName();
+    String getStyleDescription();
+    
+    int calculateBP(int str, int con, int dex, int will, int spi, int mnd);
+}
+
+--- src/main/java/com/dragonblockinfinity/common/fightstyle/FightStyleEnum.java ---
+package com.dragonblockinfinity.common.fightstyle;
+
+public enum FightStyleEnum {
+    SPIRITUALIST("Espiritualista", "Focado em Ki e ataques mágicos"),
+    WARRIOR("Guerreiro", "Focado em força e resistência corporal"),
+    MARTIAL_ARTS("Artes Marciais", "Estilo equilibrado e versátil");
+    
+    private final String displayName;
+    private final String description;
+    
+    FightStyleEnum(String displayName, String description) {
+        this.displayName = displayName;
+        this.description = description;
+    }
+    
+    public String getDisplayName() {
+        return displayName;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    @Override
+    public String toString() {
+        return displayName;
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/ki/KiFunction.java ---
+package com.dragonblockinfinity.common.ki;
+
+import com.dragonblockinfinity.common.forms.BaseForm;
+
+public class KiFunction {
+    private int ki;
+    private int positiveKi;
+    private int negativeKi;
+    private int maxKi = 100; // Maximum Ki value
+    private int minKi = 0;   // Minimum Ki value
+    private int baseMaxKi = 100; // Base maximum Ki, affected by status
+
+    public KiFunction(int ki) {
+        this.ki = ki;
+        this.positiveKi = 0;
+        this.negativeKi = 0;
+    }
+
+    public int getKi() {
+        return ki;
+    }
+
+    public int getPositiveKi() {
+        return positiveKi;
+    }
+
+    public int getNegativeKi() {
+        return negativeKi;
+    }
+
+    public int getMaxKi() {
+        return maxKi;
+    }
+
+    public void setBaseMaxKi(int baseMaxKi) {
+        this.baseMaxKi = baseMaxKi;
+        updateMaxKi();
+    }
+
+    public void updateMaxKi() {
+        this.maxKi = baseMaxKi;
+        if (this.maxKi < minKi) {
+            this.maxKi = minKi;
+        }
+    }
+
+    public void addPositiveKi(int amount) {
+        this.positiveKi += amount;
+    }
+
+    public void addNegativeKi(int amount) {
+        this.negativeKi += amount;
+    }
+
+    public void useKi(int amount) {
+        if (ki >= amount) {
+            ki -= amount;
+        } else {
+            throw new IllegalArgumentException("Not enough Ki to perform this action.");
+        }
+    }
+
+    public void regenerateKi(int amount) {
+        this.ki = Math.min(this.ki + amount, maxKi);
+    }
+
+    public void passiveRegeneration() {
+        regenerateKi(5); // Regenerate 5 Ki per tick (example value)
+    }
+
+    public void checkKiThresholds() {
+        if (ki <= 10) {
+            triggerLowKiEvent();
+        } else if (ki >= maxKi - 10) {
+            triggerHighKiEvent();
+        }
+    }
+
+    private void triggerLowKiEvent() {
+        System.out.println("Warning: Ki is critically low!");
+        // Additional logic for low Ki event
+    }
+
+    private void triggerHighKiEvent() {
+        System.out.println("Ki is at maximum capacity!");
+        // Additional logic for high Ki event
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/race/Namekian.java ---
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Namekian implements IRace {
+    
+    @Override public int getMaxKiBase() { return 4500; }
+    @Override public double getKiMultiplier() { return 1.8; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.SPIRITUALIST; }
+    
+    @Override public int getBaseStrength() { return 9; }
+    @Override public int getBaseConstitution() { return 10; }
+    @Override public int getBaseDexterity() { return 10; }
+    @Override public int getBaseWillpower() { return 14; }
+    @Override public int getBaseSpirit() { return 15; }
+    @Override public int getBaseMind() { return 12; }
+    
+    @Override public String getRaceName() { return "Namekiano"; }
+    @Override public String getRaceDescription() { 
+        return "Místicos e regenerativos com grande afinidade com Ki"; 
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/race/IRace.java ---
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public interface IRace {
+    
+    int getMaxKiBase();
+    double getKiMultiplier();
+    FightStyleEnum getPreferredFightStyle();
+    
+    int getBaseStrength();
+    int getBaseConstitution();
+    int getBaseDexterity();
+    int getBaseWillpower();
+    int getBaseSpirit();
+    int getBaseMind();
+    
+    String getRaceName();
+    String getRaceDescription();
+    
+    default int calculateMaxKi() {
+        return (int)(getMaxKiBase() * getKiMultiplier());
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/race/RaceEnum.java ---
+package com.dragonblockinfinity.common.race;
+
+public enum RaceEnum {
+    SAIYAN("Saiyajin", "Guerreiros natos com grande potencial"),
+    HALF("Metade-Saiyajin", "Híbrido com potencial extraordinário"),
+    HUMAN("Humano", "Adaptável e determinado"),
+    ARCONSIAN("Arconsiano", "Guerreiro galáctico frio e poderoso"),
+    NAMEKIAN("Namekiano", "Místicos e regenerativos");
+    
+    private final String displayName;
+    private final String description;
+    
+    RaceEnum(String displayName, String description) {
+        this.displayName = displayName;
+        this.description = description;
+    }
+    
+    public String getDisplayName() {
+        return displayName;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    @Override
+    public String toString() {
+        return displayName;
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/race/HalfSaiyan.java ---
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class HalfSaiyan implements IRace {
+    
+    @Override public int getMaxKiBase() { return 4000; }
+    @Override public double getKiMultiplier() { return 1.4; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.MARTIAL_ARTS; }
+    
+    @Override public int getBaseStrength() { return 12; }
+    @Override public int getBaseConstitution() { return 11; }
+    @Override public int getBaseDexterity() { return 11; }
+    @Override public int getBaseWillpower() { return 10; }
+    @Override public int getBaseSpirit() { return 11; }
+    @Override public int getBaseMind() { return 10; }
+    
+    @Override public String getRaceName() { return "Half-Saiyajin"; }
+    @Override public String getRaceDescription() { 
+        return "Híbrido com potencial extraordinário"; 
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/race/Saiyan.java ---
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Saiyan implements IRace {
+    
+    @Override public int getMaxKiBase() { return 5000; }
+    @Override public double getKiMultiplier() { return 1.5; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.WARRIOR; }
+    
+    @Override public int getBaseStrength() { return 15; }
+    @Override public int getBaseConstitution() { return 14; }
+    @Override public int getBaseDexterity() { return 12; }
+    @Override public int getBaseWillpower() { return 10; }
+    @Override public int getBaseSpirit() { return 10; }
+    @Override public int getBaseMind() { return 8; }
+    
+    @Override public String getRaceName() { return "Saiyajin"; }
+    @Override public String getRaceDescription() { 
+        return "Guerreiros natos com grande potencial de poder e transformações"; 
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/race/Arcosian.java ---
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Arcosian implements IRace {
+    
+    @Override public int getMaxKiBase() { return 6000; }
+    @Override public double getKiMultiplier() { return 1.8; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.WARRIOR; }
+    
+    @Override public int getBaseStrength() { return 14; }
+    @Override public int getBaseConstitution() { return 13; }
+    @Override public int getBaseDexterity() { return 9; }
+    @Override public int getBaseWillpower() { return 9; }
+    @Override public int getBaseSpirit() { return 9; }
+    @Override public int getBaseMind() { return 10; }
+    
+    @Override public String getRaceName() { return "Arcosian"; }
+    @Override public String getRaceDescription() { 
+        return "Tirano intergaláctico com poder lendário"; 
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/race/Human.java ---
+package com.dragonblockinfinity.common.race;
+
+import com.dragonblockinfinity.common.fightstyle.FightStyleEnum;
+
+public class Human implements IRace {
+    
+    @Override public int getMaxKiBase() { return 3000; }
+    @Override public double getKiMultiplier() { return 1.0; }
+    @Override public FightStyleEnum getPreferredFightStyle() { return FightStyleEnum.MARTIAL_ARTS; }
+    
+    @Override public int getBaseStrength() { return 11; }
+    @Override public int getBaseConstitution() { return 11; }
+    @Override public int getBaseDexterity() { return 11; }
+    @Override public int getBaseWillpower() { return 11; }
+    @Override public int getBaseSpirit() { return 11; }
+    @Override public int getBaseMind() { return 12; }
+    
+    @Override public String getRaceName() { return "Humano"; }
+    @Override public String getRaceDescription() { 
+        return "Adaptável e determinado com grande potencial de aprendizado"; 
+    }
+}
+
+--- src/main/java/com/dragonblockinfinity/common/stats/Constitution.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class Constitution {
+    private double value;
+
+    public Constitution(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public boolean isDamageAndKnockbackNullified(double enemyDamage, double currentStamina) {
+        if (value > enemyDamage && currentStamina > 0) {
+            return true; // Dano e knockback anulados
+        }
+        return false;
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/stats/Dexterity.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class Dexterity {
+    private double value;
+
+    public Dexterity(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    // Multiplicador base de Dexteridade
+    public double getMultiplier() {
+        return 1 + (value * 0.01); // Multiplicador baseado no valor de Dexterity
+    }
+
+    // Defesa passiva (redução de dano)
+    public double getPassiveDefense() {
+        return value * 0.5; // Redução passiva de dano
+    }
+
+    // Redução de dano passiva
+    public double getDamageReduction() {
+        return (value * 0.5) / 100.0; // Reduz dano em 0.5% por ponto de Dexterity
+    }
+
+    public double calculateDodgeChance(double enemyDamage) {
+        if (value >= 2.9 * enemyDamage) {
+            return 7.0 * getMultiplier(); // Multiplica a esquiva
+        }
+        return 0.0;
+    }
+
+    public double calculateKnockbackReduction(double enemyDamage) {
+        if (value >= 2.9 * enemyDamage) {
+            return 0.7 * getMultiplier(); // Multiplica a redução de knockback
+        }
+        return 1.0; // Sem redução
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/stats/Strength.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class Strength {
+    private double value;
+
+    public Strength(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public double calculateStaminaCost(double con, double stamina) {
+        if (value > con) {
+            return stamina * (1 + (value - con) * 0.1); // Gasto maior
+        } else {
+            return stamina * (1 - (con - value) * 0.05); // Gasto menor
+        }
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/stats/Willpower.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class Willpower {
+    private double kiAttackPower;
+
+    public Willpower(double kiAttackPower) {
+        this.kiAttackPower = kiAttackPower;
+    }
+
+    public double getKiAttackPower() {
+        return kiAttackPower;
+    }
+
+    public void setKiAttackPower(double kiAttackPower) {
+        this.kiAttackPower = kiAttackPower;
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/stats/Mind.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class Mind {
+    private double skillPoints;
+
+    public Mind(double skillPoints) {
+        this.skillPoints = skillPoints;
+    }
+
+    public double getSkillPoints() {
+        return skillPoints;
+    }
+
+    public void setSkillPoints(double skillPoints) {
+        this.skillPoints = skillPoints;
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/stats/Spirit.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class Spirit {
+    private double maxKi;
+
+    public Spirit(double maxKi) {
+        this.maxKi = maxKi;
+    }
+
+    public double getMaxKi() {
+        return maxKi;
+    }
+
+    public void setMaxKi(double maxKi) {
+        this.maxKi = maxKi;
+    }
+}
+--- src/main/java/com/dragonblockinfinity/common/stats/PlayerStats.java ---
+package com.dragonblockinfinity.common.stats;
+
+public class PlayerStats {
+    private double str; // Força
+    private double spi; // Ki Máximo
+    private double will; // Força do ataque de Ki
+    private double mnd; // Moeda para upar skills e formas
+    private double con; // Vida e Stamina Máxima
+    private double dex; // Velocidade e Vida
+
+    // Construtor
+    public PlayerStats(double str, double spi, double will, double mnd, double con, double dex) {
+        this.str = str;
+        this.spi = spi;
+        this.will = will;
+        this.mnd = mnd;
+        this.con = con;
+        this.dex = dex;
+    }
+
+    // Getters e Setters
+    public double getStr() {
+        return str;
+    }
+
+    public void setStr(double str) {
+        this.str = str;
+    }
+
+    public double getSpi() {
+        return spi;
+    }
+
+    public void setSpi(double spi) {
+        this.spi = spi;
+    }
+
+    public double getWill() {
+        return will;
+    }
+
+    public void setWill(double will) {
+        this.will = will;
+    }
+
+    public double getMnd() {
+        return mnd;
+    }
+
+    public void setMnd(double mnd) {
+        this.mnd = mnd;
+    }
+
+    public double getCon() {
+        return con;
+    }
+
+    public void setCon(double con) {
+        this.con = con;
+    }
+
+    public double getDex() {
+        return dex;
+    }
+
+    public void setDex(double dex) {
+        this.dex = dex;
+    }
+
+    // Cálculo de gasto de stamina baseado em Str e Con
+    public double calculateStaminaCost(double stamina) {
+        if (str > con) {
+            return stamina * (1 + (str - con) * 0.1); // Gasto maior
+        } else {
+            return stamina * (1 - (con - str) * 0.05); // Gasto menor
+        }
+    }
+
+    // Cálculo de esquiva baseado em Dex
+    public double calculateDodgeChance(double enemyDamage) {
+        if (dex >= 2.9 * enemyDamage) {
+            return 7.0; // 7% de esquiva
+        }
+        return 0.0;
+    }
+
+    // Redução de knockback baseado em Dex
+    public double calculateKnockbackReduction(double enemyDamage) {
+        if (dex >= 2.9 * enemyDamage) {
+            return 0.7; // Reduz knockback em 30%
+        }
+        return 1.0; // Sem redução
+    }
+
+    // Anulação de dano e knockback baseado em defesa real e stamina
+    public boolean isDamageAndKnockbackNullified(double enemyDamage, double currentStamina) {
+        if (con > enemyDamage && currentStamina > 0) {
+            return true; // Dano e knockback anulados
+        }
+        return false;
+    }
+}
+
+=== ARQUIVOS PNG ===
+src/main/resources/assets/dragonblockinfinity/textures/entity/tail/tail_half_sayan.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/tail/tail_arconsian.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/careca.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hair_base4.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hair_base1.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hair_base2.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hairoverlay/hair_2_overlay.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hairoverlay/hair_3_overlay.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hairoverlay/hair_4_overlay.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hairoverlay/hair_1_overlay.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hair_base6.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/hair/hair_base3.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/eye/eye_1_left.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/customizacao/eye/eye_1_right.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/race/arconsian.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/race/humano.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/race/sayajin.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/race/fsayajin.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/race/namkian.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/musculosrace/musculos.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/musculosrace/musculos_arconsian.png
+src/main/resources/assets/dragonblockinfinity/textures/entity/mobs/dino/dinossauro.png
+src/main/resources/assets/dragonblockinfinity/textures/models/peso1.png
+src/main/resources/assets/dragonblockinfinity/textures/gui/menus/mn.png
+src/main/resources/assets/dragonblockinfinity/textures/gui/menus/menu_base.png
+src/main/resources/assets/dragonblockinfinity/textures/gui/huds/icons_hud.png
+src/main/resources/assets/dragonblockinfinity/textures/gui/huds/ki_attck_chargin.png
+src/main/resources/assets/dragonblockinfinity/textures/particules/hit_clash.png
+src/main/resources/assets/dragonblockinfinity/textures/particules/aura/ki_aura_ssj1.png
+src/main/resources/assets/dragonblockinfinity/textures/particules/aura/ki_aura.png
+src/main/resources/assets/dragonblockinfinity/textures/particules/aura/ki_aura_ssj3.png
+src/main/resources/assets/dragonblockinfinity/textures/particules/aura/ki_aura_ssj2.png
+src/main/resources/assets/dragonblockinfinity/textures/item/ninbus/item_dark_fly_ninbus.png
+src/main/resources/assets/dragonblockinfinity/textures/item/ninbus/item_fly_ninbus.png
+src/main/resources/assets/dragonblockinfinity/textures/item/scouter/item_scouter.png
+src/main/resources/assets/dragonblockinfinity/textures/item/pesos/item_peso1.png
+src/main/resources/assets/dragonblockinfinity/textures/item/comida/item_dino_meat_cooked.png
+src/main/resources/assets/dragonblockinfinity/textures/item/comida/item_dino_meat.png
+src/main/resources/assets/dragonblockinfinity/textures/item/blocks/item_dirty_stone_dirty.png
+src/main/resources/assets/dragonblockinfinity/textures/item/blocks/item_grass_namek.png
+src/main/resources/assets/dragonblockinfinity/textures/item/Dragon/item_dragon_block.png
+src/main/resources/assets/dragonblockinfinity/textures/item/Dragon/item_radar.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block4_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_namek_log_side.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dirty_stone_stone.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_namek_grass_top.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block3_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_namek_grass_side.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block6_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block7_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dirty_stone_cobblestone.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block5_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block1_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_dragon_block2_earth.png
+src/main/resources/assets/dragonblockinfinity/textures/blocks/block_namek_log_top.png
