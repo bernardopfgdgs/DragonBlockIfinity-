@@ -3,22 +3,24 @@ loaderVersion="[47,)"
 license="All Rights Reserved"
 
 [[mods]]
-modId="DragonBlockInfinity"
+modId="dragonblockinfinity"
 version="1.0.0"
 displayName="Dragon Block Infinity"
-authors="Bernardo"
-description="A Dragon Ball mod for Minecraft Forge 1.20.1"
+description='''
+Dragon Block mod inspirado em Dragon Ball Z
+'''
+logoFile="logo.png"
 
 [[dependencies.dragonblockinfinity]]
-modId="forge"
-mandatory=true
-versionRange="[47,)"
-ordering="NONE"
-side="BOTH"
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.dragonblockinfinity]]
-modId="minecraft"
-mandatory=true
-versionRange="[1.20.1]"
-ordering="NONE"
-side="BOTH"
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
